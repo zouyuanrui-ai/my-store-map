@@ -402,7 +402,9 @@
           // 获取当前位置名称
           function getCurrentLocationName(location) {
               AMap.plugin('AMap.Geocoder', function() {
-                  const geocoder = new AMap.Geocoder();
+                    const geocoder = new AMap.Geocoder({                                                                                                                                                                          
+      key: '8a892ff18be47efdf7633b0273491d79'                                                                                                                                                                   
+  });
                   geocoder.getAddress([location.lng, location.lat], function(status, result) {
                       if (status === 'complete' && result.info === 'OK') {
                           const address = result.regeocode.formattedAddress;
@@ -567,7 +569,9 @@
           // 将地址转换为经纬度
           function geocodeStores() {
               AMap.plugin('AMap.Geocoder', function() {
-                  const geocoder = new AMap.Geocoder();
+                    const geocoder = new AMap.Geocoder({                                                                                                                                                                          
+      key: '8a892ff18be47efdf7633b0273491d79'                                                                                                                                                                   
+  });
                   let completed = 0;
 
                   stores.forEach((store, index) => {
