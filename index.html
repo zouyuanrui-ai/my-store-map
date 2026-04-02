@@ -1,435 +1,1300 @@
-  <!DOCTYPE html>                                                                                                                                                                                               
-  <html lang="zh-CN">                                                                                                                                                                                           
-  <head>                                                                                                                                                                                                        
-      <meta charset="UTF-8">                                                                                                                                                                                    
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">                                                                                               
-      <title>我的好店地图</title>                                                                                                                                                                               
-      <style>                                                                                                                                                                                                   
-          * {                                                                                                                                                                                                   
-              margin: 0;                                                                                                                                                                                        
-              padding: 0;                                                                                                                                                                                       
-              box-sizing: border-box;                                                                                                                                                                           
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          body {                                                                                                                                                                                                
+  1. 先在DUMO的 } 后面加逗号，变成：
+  {
+      "name": "DUMO",
+      "address": "北京市朝阳区新源街63号103e",
+      "notes": "西餐招牌菜提拉米苏",
+      "type": "餐厅"
+  },   ← 注意这里加了逗号
+
+  2. 然后在逗号后面按回车，添加新店铺：
+  {
+      "name": "charcoal煤球",
+      "address": "北京市朝阳区幸福一村西里甲6号",
+      "notes": "西餐",
+      "type": "餐厅"
+  }
+
+  3. 完整效果：
+  {
+      "name": "DUMO",
+      "address": "北京市朝阳区新源街63号103e",
+      "notes": "西餐招牌菜提拉米苏",
+      "type": "餐厅"
+  },
+  {
+      "name": "charcoal煤球",
+      "address": "北京市朝阳区幸福一村西里甲6号",
+      "notes": "西餐",
+      "type": "餐厅"
+  }
+
+  ---
+  第4步：保存
+
+  1. 滚到页面最下面
+  2. 点击绿色按钮 "Commit changes..."
+  3. 再次点击 "Commit changes"
+
+  ---
+  第5步：等待生效
+
+  - 等1-2分钟
+  - 刷新网站：https://zouyuanrui-ai.github.io/my-store-map/
+  - 应该能看到3家店了！
+
+  ---
+  💡 重点提示：
+
+  - ⚠️  DUMO后面一定要加逗号
+  - ⚠️  charcoal煤球后面不加逗号（因为是最后一个）
+  - ⚠️  所有符号都是英文的
+
+  ---
+  您现在试试在手机上操作，有问题随时问我！ 😊
+
+  或者您觉得太复杂，我也可以直接帮您推送上去？
+
+❯ 等一下，以后每次增加店铺都要这样操作吗？太浮躁了                                                                                                                                                              
+
+⏺ 您说得对！这样操作确实太麻烦了，不适合日常使用。
+
+  更简单的方案：
+
+  方案A：直接找我帮忙 ✅（最简单）
+
+  您只需要：
+  - 看到好店时，给我发：店名、地址、备注、类型
+  - 我10秒钟帮您加上去
+  - 1-2分钟后网站自动更新
+
+  优点：
+  - 零学习成本
+  - 完全不用管代码
+  - 想加多少加多少
+
+  缺点：
+  - 需要联系我（但您可以攒几家一起发）
+
+  ---
+  方案B：做一个添加表单页面（推荐）
+
+  我可以给您做一个简单的添加页面：
+  - 打开网页，填写店名、地址、备注、选择类型
+  - 点击"生成代码"
+  - 自动生成好格式的代码，您复制粘贴到GitHub就行
+
+  比刚才简单很多，不用担心逗号、格式错误。
+
+  ---
+  方案C：用表格管理（最灵活）
+
+  把店铺数据放到腾讯文档或飞书表格：
+  - 像Excel一样填表格
+  - 网站自动从表格读取数据
+  - 手机上也能随时编辑
+
+  但需要额外配置，稍微复杂一点。
+
+  ---
+  🎯 我的建议：
+
+  现在用方案A（找我帮忙）
+  - 快速、简单、不出错
+  - 您就当我是您的技术助手
+
+  如果以后店铺多了（几十上百家），再考虑方案B或C
+
+  ---
+  您觉得呢？用方案A的话，现在就帮您把charcoal煤球加上去！ 😊
+
+❯ 不能直接在目前的页面上添加吗？我打开网站就能直接操作不需要跳转到其他页面                                                                                                                                      
+
+⏺ 太对了！这才是最好的方案！直接在地图网页上添加店铺，不用跳转。
+
+  我可以给您加一个"➕ 添加店铺"按钮，点击后弹出表单，填完就保存。
+
+  但先确认一下：
+
+  您主要用哪种方式？
+
+  选项1：只在一个手机上用
+
+  - 数据保存在手机浏览器里
+  - 只有这个手机能看到
+  - 最简单，马上就能做
+
+  选项2：多设备同步（手机+电脑都能看）
+
+  - 数据保存在GitHub上（云端）
+  - 所有设备都能看到最新数据
+  - 需要配置一下GitHub权限，稍微复杂点
+
+  ---
+  🤔 我的建议：
+
+  先做选项1，简单快速：
+  - ✅ 打开网页就有"➕ 添加店铺"按钮
+  - ✅ 填表单，秒保存
+  - ✅ 可以编辑、删除店铺
+  - ❌ 换手机/清除浏览器数据后会丢失
+
+  如果以后需要多设备同步，再升级到选项2
+
+  ---
+  您选哪个？我现在就开始改！ 😊
+
+  或者您主要就用一个手机？那选项1完全够用了！
+
+❯ 1                                                                                                                                                                                                             
+
+⏺ 好的！马上给您加上"➕ 添加店铺"功能！数据会保存在手机浏览器里。
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ 我现在开始修改代码，添加"➕ 添加店铺"功能：
+
+⏺ Update(index.html)
+  ⎿  Added 124 lines
+      146              border-radius: 4px;
+      147              font-size: 13px;
+      148          }
+      149 +                                                                                                                                                                                              
+      150 +        .add-btn {                                                                                                                                                                            
+      151 +            position: fixed;                                                                                                                                                                  
+      152 +            bottom: 30px;                                                                                                                                                                     
+      153 +            right: 20px;                                                                                                                                                                      
+      154 +            width: 56px;                                                                                                                                                                      
+      155 +            height: 56px;                                                                                                                                                                     
+      156 +            background: #52c41a;                                                                                                                                                              
+      157 +            color: white;                                                                                                                                                                     
+      158 +            border: none;                                                                                                                                                                     
+      159 +            border-radius: 50%;                                                                                                                                                               
+      160 +            font-size: 28px;                                                                                                                                                                  
+      161 +            box-shadow: 0 4px 12px rgba(0,0,0,0.3);                                                                                                                                           
+      162 +            cursor: pointer;                                                                                                                                                                  
+      163 +            z-index: 999;                                                                                                                                                                     
+      164 +        }                                                                                                                                                                                     
+      165 +                                                                                                                                                                                              
+      166 +        .modal {                                                                                                                                                                              
+      167 +            display: none;                                                                                                                                                                    
+      168 +            position: fixed;                                                                                                                                                                  
+      169 +            top: 0;                                                                                                                                                                           
+      170 +            left: 0;                                                                                                                                                                          
+      171 +            right: 0;                                                                                                                                                                         
+      172 +            bottom: 0;                                                                                                                                                                        
+      173 +            background: rgba(0,0,0,0.6);                                                                                                                                                      
+      174 +            z-index: 1001;                                                                                                                                                                    
+      175 +            overflow-y: auto;                                                                                                                                                                 
+      176 +        }                                                                                                                                                                                     
+      177 +                                                                                                                                                                                              
+      178 +        .modal.show {                                                                                                                                                                         
+      179 +            display: flex;                                                                                                                                                                    
+      180 +            align-items: center;                                                                                                                                                              
+      181 +            justify-content: center;                                                                                                                                                          
+      182 +        }                                                                                                                                                                                     
+      183 +                                                                                                                                                                                              
+      184 +        .modal-content {                                                                                                                                                                      
+      185 +            background: white;                                                                                                                                                                
+      186 +            width: 90%;                                                                                                                                                                       
+      187 +            max-width: 400px;                                                                                                                                                                 
+      188 +            border-radius: 12px;                                                                                                                                                              
+      189 +            padding: 20px;                                                                                                                                                                    
+      190 +            margin: 20px;                                                                                                                                                                     
+      191 +        }                                                                                                                                                                                     
+      192 +                                                                                                                                                                                              
+      193 +        .modal-title {                                                                                                                                                                        
+      194 +            font-size: 18px;                                                                                                                                                                  
+      195 +            font-weight: bold;                                                                                                                                                                
+      196 +            margin-bottom: 15px;                                                                                                                                                              
+      197 +        }                                                                                                                                                                                     
+      198 +                                                                                                                                                                                              
+      199 +        .form-group {                                                                                                                                                                         
+      200 +            margin-bottom: 15px;                                                                                                                                                              
+      201 +        }                                                                                                                                                                                     
+      202 +                                                                                                                                                                                              
+      203 +        .form-group label {                                                                                                                                                                   
+      204 +            display: block;                                                                                                                                                                   
+      205 +            font-size: 14px;                                                                                                                                                                  
+      206 +            color: #666;                                                                                                                                                                      
+      207 +            margin-bottom: 5px;                                                                                                                                                               
+      208 +        }                                                                                                                                                                                     
+      209 +                                                                                                                                                                                              
+      210 +        .form-group input,                                                                                                                                                                    
+      211 +        .form-group textarea,                                                                                                                                                                 
+      212 +        .form-group select {                                                                                                                                                                  
+      213 +            width: 100%;                                                                                                                                                                      
+      214 +            padding: 10px;                                                                                                                                                                    
+      215 +            border: 1px solid #ddd;                                                                                                                                                           
+      216 +            border-radius: 6px;                                                                                                                                                               
+      217 +            font-size: 14px;                                                                                                                                                                  
+      218 +        }                                                                                                                                                                                     
+      219 +                                                                                                                                                                                              
+      220 +        .form-group textarea {                                                                                                                                                                
+      221 +            resize: vertical;                                                                                                                                                                 
+      222 +            min-height: 60px;                                                                                                                                                                 
+      223 +        }                                                                                                                                                                                     
+      224 +                                                                                                                                                                                              
+      225 +        .form-buttons {                                                                                                                                                                       
+      226 +            display: flex;                                                                                                                                                                    
+      227 +            gap: 10px;                                                                                                                                                                        
+      228 +            margin-top: 20px;                                                                                                                                                                 
+      229 +        }                                                                                                                                                                                     
+      230 +                                                                                                                                                                                              
+      231 +        .form-buttons button {                                                                                                                                                                
+      232 +            flex: 1;                                                                                                                                                                          
+      233 +            padding: 12px;                                                                                                                                                                    
+      234 +            border: none;                                                                                                                                                                     
+      235 +            border-radius: 6px;                                                                                                                                                               
+      236 +            font-size: 15px;                                                                                                                                                                  
+      237 +            cursor: pointer;                                                                                                                                                                  
+      238 +        }                                                                                                                                                                                     
+      239 +                                                                                                                                                                                              
+      240 +        .btn-cancel {                                                                                                                                                                         
+      241 +            background: #f0f0f0;                                                                                                                                                              
+      242 +            color: #666;                                                                                                                                                                      
+      243 +        }                                                                                                                                                                                     
+      244 +                                                                                                                                                                                              
+      245 +        .btn-submit {                                                                                                                                                                         
+      246 +            background: #1890ff;                                                                                                                                                              
+      247 +            color: white;                                                                                                                                                                     
+      248 +        }                                                                                                                                                                                     
+      249 +                                                                                                                                                                                              
+      250 +        .store-actions {                                                                                                                                                                      
+      251 +            margin-top: 10px;                                                                                                                                                                 
+      252 +            display: flex;                                                                                                                                                                    
+      253 +            gap: 8px;                                                                                                                                                                         
+      254 +        }                                                                                                                                                                                     
+      255 +                                                                                                                                                                                              
+      256 +        .btn-edit, .btn-delete {                                                                                                                                                              
+      257 +            padding: 4px 10px;                                                                                                                                                                
+      258 +            border: none;                                                                                                                                                                     
+      259 +            border-radius: 4px;                                                                                                                                                               
+      260 +            font-size: 12px;                                                                                                                                                                  
+      261 +            cursor: pointer;                                                                                                                                                                  
+      262 +        }                                                                                                                                                                                     
+      263 +                                                                                                                                                                                              
+      264 +        .btn-edit {                                                                                                                                                                           
+      265 +            background: #1890ff;                                                                                                                                                              
+      266 +            color: white;                                                                                                                                                                     
+      267 +        }                                                                                                                                                                                     
+      268 +                                                                                                                                                                                              
+      269 +        .btn-delete {                                                                                                                                                                         
+      270 +            background: #ff4d4f;                                                                                                                                                              
+      271 +            color: white;                                                                                                                                                                     
+      272 +        }                                                                                                                                                                                     
+      273      </style>
+      274  </head>
+      275  <body>
+
+⏺ Update(index.html)
+  ⎿  Added 37 lines
+      292          <div class="loading">加载中...</div>
+      293      </div>
+      294  
+      295 +    <!-- 添加店铺按钮 -->                                                                                                                                                                     
+      296 +    <button class="add-btn" onclick="openAddModal()">+</button>                                                                                                                               
+      297 +                                                                                                                                                                                              
+      298 +    <!-- 添加/编辑店铺弹窗 -->                                                                                                                                                                
+      299 +    <div class="modal" id="storeModal">                                                                                                                                                       
+      300 +        <div class="modal-content">                                                                                                                                                           
+      301 +            <div class="modal-title" id="modalTitle">添加店铺</div>                                                                                                                           
+      302 +            <form id="storeForm" onsubmit="saveStore(event)">                                                                                                                                 
+      303 +                <div class="form-group">                                                                                                                                                      
+      304 +                    <label>店铺名称 *</label>                                                                                                                                                 
+      305 +                    <input type="text" id="storeName" required placeholder="例如：星巴克">                                                                                                    
+      306 +                </div>                                                                                                                                                                        
+      307 +                <div class="form-group">                                                                                                                                                      
+      308 +                    <label>完整地址 *</label>                                                                                                                                                 
+      309 +                    <input type="text" id="storeAddress" required placeholder="例如：北京市朝阳区三里屯路11号">                                                                               
+      310 +                </div>                                                                                                                                                                        
+      311 +                <div class="form-group">                                                                                                                                                      
+      312 +                    <label>类型 *</label>                                                                                                                                                     
+      313 +                    <select id="storeType" required>                                                                                                                                          
+      314 +                        <option value="餐厅">🍽️  餐厅</option>                                                                                                                                 
+      315 +                        <option value="咖啡甜品店">☕ 咖啡甜品店</option>                                                                                                                     
+      316 +                        <option value="购物">🛍️  购物</option>                                                                                                                                 
+      317 +                    </select>                                                                                                                                                                 
+      318 +                </div>                                                                                                                                                                        
+      319 +                <div class="form-group">                                                                                                                                                      
+      320 +                    <label>备注</label>                                                                                                                                                       
+      321 +                    <textarea id="storeNotes" placeholder="例如：小红书推荐，招牌菜XXX"></textarea>                                                                                           
+      322 +                </div>                                                                                                                                                                        
+      323 +                <input type="hidden" id="editIndex" value="">                                                                                                                                 
+      324 +                <div class="form-buttons">                                                                                                                                                    
+      325 +                    <button type="button" class="btn-cancel" onclick="closeModal()">取消</button>                                                                                             
+      326 +                    <button type="submit" class="btn-submit">保存</button>                                                                                                                    
+      327 +                </div>                                                                                                                                                                        
+      328 +            </form>                                                                                                                                                                           
+      329 +        </div>                                                                                                                                                                                
+      330 +    </div>                                                                                                                                                                                    
+      331 +                                                                                                                                                                                              
+      332      <!-- 引入高德地图 -->
+      333      <script src="https://webapi.amap.com/maps?v=2.0&key=8a8eef3bc1ed67f061273cbd53e8062f"></script>
+      334  
+
+⏺ 现在修改JavaScript代码，添加存储功能：
+
+⏺ Update(index.html)
+  ⎿  Added 94 lines, removed 3 lines
+      414  
+      415          // 加载店铺数据
+      416          function loadStores() {
+      417 -            // 店铺数据（直接写在这里，方便修改）                                                                                                                                             
+      418 -            // type 可选值：餐厅、咖啡甜品店、购物                                                                                                                                            
+      419 -            allStores = [                                                                                                                                                                     
+      417 +            // 默认店铺数据                                                                                                                                                                   
+      418 +            const defaultStores = [                                                                                                                                                           
+      419                  {
+      420                      "name": "宴遇",
+      421                      "address": "北京市朝阳区建国路87号北京SKP 6层",
+     ...
+      435                      "type": "餐厅"
+      436                  }
+      437              ];
+      438 +                                                                                                                                                                                              
+      439 +            // 从localStorage读取数据，如果没有则使用默认数据                                                                                                                                 
+      440 +            const savedStores = localStorage.getItem('myStores');                                                                                                                             
+      441 +            if (savedStores) {                                                                                                                                                                
+      442 +                try {                                                                                                                                                                         
+      443 +                    allStores = JSON.parse(savedStores);                                                                                                                                      
+      444 +                } catch (e) {                                                                                                                                                                 
+      445 +                    allStores = defaultStores;                                                                                                                                                
+      446 +                }                                                                                                                                                                             
+      447 +            } else {                                                                                                                                                                          
+      448 +                allStores = defaultStores;                                                                                                                                                    
+      449 +                // 首次使用，保存默认数据                                                                                                                                                     
+      450 +                localStorage.setItem('myStores', JSON.stringify(defaultStores));                                                                                                              
+      451 +            }                                                                                                                                                                                 
+      452 +                                                                                                                                                                                              
+      453              stores = allStores;
+      454              setupFilters();
+      455              geocodeStores();
+      456          }
+      457  
+      458 +        // 保存店铺数据到localStorage                                                                                                                                                         
+      459 +        function saveToLocalStorage() {                                                                                                                                                       
+      460 +            localStorage.setItem('myStores', JSON.stringify(allStores));                                                                                                                      
+      461 +        }                                                                                                                                                                                     
+      462 +                                                                                                                                                                                              
+      463 +        // 打开添加店铺弹窗                                                                                                                                                                   
+      464 +        function openAddModal() {                                                                                                                                                             
+      465 +            document.getElementById('modalTitle').textContent = '添加店铺';                                                                                                                   
+      466 +            document.getElementById('storeForm').reset();                                                                                                                                     
+      467 +            document.getElementById('editIndex').value = '';                                                                                                                                  
+      468 +            document.getElementById('storeModal').classList.add('show');                                                                                                                      
+      469 +        }                                                                                                                                                                                     
+      470 +                                                                                                                                                                                              
+      471 +        // 打开编辑店铺弹窗                                                                                                                                                                   
+      472 +        function openEditModal(index) {                                                                                                                                                       
+      473 +            const store = allStores[index];                                                                                                                                                   
+      474 +            document.getElementById('modalTitle').textContent = '编辑店铺';                                                                                                                   
+      475 +            document.getElementById('storeName').value = store.name;                                                                                                                          
+      476 +            document.getElementById('storeAddress').value = store.address;                                                                                                                    
+      477 +            document.getElementById('storeType').value = store.type;                                                                                                                          
+      478 +            document.getElementById('storeNotes').value = store.notes || '';                                                                                                                  
+      479 +            document.getElementById('editIndex').value = index;                                                                                                                               
+      480 +            document.getElementById('storeModal').classList.add('show');                                                                                                                      
+      481 +        }                                                                                                                                                                                     
+      482 +                                                                                                                                                                                              
+      483 +        // 关闭弹窗                                                                                                                                                                           
+      484 +        function closeModal() {                                                                                                                                                               
+      485 +            document.getElementById('storeModal').classList.remove('show');                                                                                                                   
+      486 +        }                                                                                                                                                                                     
+      487 +                                                                                                                                                                                              
+      488 +        // 保存店铺                                                                                                                                                                           
+      489 +        function saveStore(event) {                                                                                                                                                           
+      490 +            event.preventDefault();                                                                                                                                                           
+      491 +                                                                                                                                                                                              
+      492 +            const name = document.getElementById('storeName').value.trim();                                                                                                                   
+      493 +            const address = document.getElementById('storeAddress').value.trim();                                                                                                             
+      494 +            const type = document.getElementById('storeType').value;                                                                                                                          
+      495 +            const notes = document.getElementById('storeNotes').value.trim();                                                                                                                 
+      496 +            const editIndex = document.getElementById('editIndex').value;                                                                                                                     
+      497 +                                                                                                                                                                                              
+      498 +            const storeData = { name, address, type, notes };                                                                                                                                 
+      499 +                                                                                                                                                                                              
+      500 +            if (editIndex !== '') {                                                                                                                                                           
+      501 +                // 编辑现有店铺                                                                                                                                                               
+      502 +                allStores[parseInt(editIndex)] = storeData;                                                                                                                                   
+      503 +            } else {                                                                                                                                                                          
+      504 +                // 添加新店铺                                                                                                                                                                 
+      505 +                allStores.push(storeData);                                                                                                                                                    
+      506 +            }                                                                                                                                                                                 
+      507 +                                                                                                                                                                                              
+      508 +            // 保存到localStorage                                                                                                                                                             
+      509 +            saveToLocalStorage();                                                                                                                                                             
+      510 +                                                                                                                                                                                              
+      511 +            // 关闭弹窗                                                                                                                                                                       
+      512 +            closeModal();                                                                                                                                                                     
+      513 +                                                                                                                                                                                              
+      514 +            // 重新加载店铺                                                                                                                                                                   
+      515 +            stores = allStores;                                                                                                                                                               
+      516 +            markers.forEach(marker => marker.setMap(null));                                                                                                                                   
+      517 +            markers = [];                                                                                                                                                                     
+      518 +            geocodeStores();                                                                                                                                                                  
+      519 +        }                                                                                                                                                                                     
+      520 +                                                                                                                                                                                              
+      521 +        // 删除店铺                                                                                                                                                                           
+      522 +        function deleteStore(index) {                                                                                                                                                         
+      523 +            if (confirm('确定要删除这个店铺吗？')) {                                                                                                                                          
+      524 +                allStores.splice(index, 1);                                                                                                                                                   
+      525 +                saveToLocalStorage();                                                                                                                                                         
+      526 +                                                                                                                                                                                              
+      527 +                // 重新加载店铺                                                                                                                                                               
+      528 +                stores = allStores;                                                                                                                                                           
+      529 +                markers.forEach(marker => marker.setMap(null));                                                                                                                               
+      530 +                markers = [];                                                                                                                                                                 
+      531 +                geocodeStores();                                                                                                                                                              
+      532 +            }                                                                                                                                                                                 
+      533 +        }                                                                                                                                                                                     
+      534 +                                                                                                                                                                                              
+      535          // 设置筛选按钮
+      536          function setupFilters() {
+      537              const tabs = document.querySelectorAll('.filter-tab');
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Update(index.html)
+  ⎿  Added 11 lines, removed 2 lines
+      648              }
+      649  
+      650              // 生成列表HTML
+      651 -            const listHtml = stores.map(store => {                                                                                                                                            
+      651 +            const listHtml = stores.map((store, idx) => {                                                                                                                                     
+      652 +                // 找到该店铺在allStores中的索引（用于编辑和删除）                                                                                                                            
+      653 +                const realIndex = allStores.findIndex(s =>                                                                                                                                    
+      654 +                    s.name === store.name && s.address === store.address                                                                                                                      
+      655 +                );                                                                                                                                                                            
+      656 +                                                                                                                                                                                              
+      657                  let distanceHtml = '';
+      658                  if (store.distance !== undefined) {
+      659                      if (store.distance < 1) {
+     ...
+      685                          <div class="store-address">${store.address}</div>
+      686                          ${distanceHtml}
+      687                          ${notesHtml}
+      683 -                        ${navUrl ? `<a href="${navUrl}" class="navigate-btn">🧭 导航</a>` : ''}                                                                                               
+      688 +                        <div class="store-actions">                                                                                                                                           
+      689 +                            ${navUrl ? `<a href="${navUrl}" class="navigate-btn">🧭 导航</a>` : ''}                                                                                           
+      690 +                            <button class="btn-edit" onclick="openEditModal(${realIndex})">✏️  编辑</button>                                                                                   
+      691 +                            <button class="btn-delete" onclick="deleteStore(${realIndex})">🗑️  删除</button>                                                                                   
+      692 +                        </div>                                                                                                                                                                
+      693                      </div>
+      694                  `;
+      695              }).join('');
+
+⏺ 完成！现在测试一下：
+
+⏺ Bash(open /Users/yqg/my-store-map/index.html)
+  ⎿  (No output)
+
+⏺ ✅ 功能已添加完成！
+
+  我刚给您打开了更新后的网页，在电脑上您应该能看到：
+
+  🎉 新功能：
+
+  1. 右下角绿色 ➕ 按钮 - 点击添加新店铺
+  2. 每个店铺下方有：
+    - 🧭 导航（跳转高德地图）
+    - ✏️  编辑（修改店铺信息）
+    - 🗑️  删除（删除这个店铺）
+  3. 点击 ➕ 后会弹出表单：
+    - 填写店名、地址、类型、备注
+    - 点"保存"即可
+    - 数据自动保存在浏览器里
+  4. 筛选功能照常使用（全部、餐厅、咖啡甜品店、购物）
+
+  ---
+  📱 要在手机上使用：
+
+  需要把更新后的文件上传到GitHub。
+
+  我可以直接帮您操作，也可以教您用网页上传。
+
+  ---
+  💾 数据说明：
+
+  - 数据保存在手机浏览器里（localStorage）
+  - 不会丢失，除非您清除浏览器数据
+  - 只在当前手机可见，换手机看不到
+  - 已经包含了3家默认店铺（宴遇、DUMO、charcoal煤球）
+
+  ---
+  您现在想：
+  1. 先在电脑上测试一下功能？
+  2. 还是直接让我把它更新到GitHub，在手机上用？
+
+  选哪个？😊
+
+✻ Churned for 1m 37s
+
+❯ 2                                                                                                                                                                                                             
+
+⏺ 好的！我现在帮您更新到GitHub。
+
+  最简单的方式：您通过GitHub网页编辑文件。
+
+  📝 操作步骤：
+
+  1. 打开编辑页面
+
+  在浏览器输入：
+  https://github.com/zouyuanrui-ai/my-store-map/edit/main/index.html
+
+  2. 删除所有旧代码
+
+  - 按 Cmd+A（Mac）或 Ctrl+A（Windows）全选
+  - 按 Delete 删除
+
+  3. 粘贴新代码
+
+  我现在生成完整的新代码，您直接复制粘贴：
+
+  Read 2 files (ctrl+o to expand)
+
+⏺ 文件有700行，直接复制粘贴可能比较麻烦。我用更简单的方法：直接上传文件。
+
+  更简单的方法：文件上传
+
+  步骤：
+
+  1. 打开这个网址：
+  https://github.com/zouyuanrui-ai/my-store-map
+
+  2. 点击 index.html 文件（在文件列表里）
+  3. 点击右上角的"铅笔图标"✏️ （或者"Edit this file"）
+  4. 点击右上角的"..."菜单 → Delete file（先删除旧文件）
+    - 填写提交信息，点"Commit changes"
+  5. 回到仓库首页，点击"Add file" → "Upload files"
+  6. 把本地的文件拖进去：
+    - 文件位置：/Users/yqg/my-store-map/index.html
+  7. 点击"Commit changes"
+
+  ---
+  或者更直接：我打开文件夹，您直接拖
+
+⏺ Bash(open /Users/yqg/my-store-map)
+  ⎿  (No output)
+
+⏺ 好了！文件夹已打开。
+
+  现在最简单的操作：
+
+  1. 打开：https://github.com/zouyuanrui-ai/my-store-map/edit/main/index.html
+  2. 全选旧代码（Cmd+A）并删除
+  3. 把我发给您的完整代码复制粘贴进去
+
+  代码我放在下一条消息里，您全选复制就行！
+
+  ---
+  继续下一条消息 ⬇️ 
+
+✻ Brewed for 38s
+
+❯ 好的                                                                                                                                                                                                          
+
+⏺ 好的！这是完整代码，全选复制：
+
+  <!DOCTYPE html>
+  <html lang="zh-CN">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <title>我的好店地图</title>
+      <style>
+          * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+          }
+
+          body {
               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-              background: #f5f5f5;                                                                                                                                                                              
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          #map {                                                                                                                                                                                                
-              width: 100%;                                                                                                                                                                                      
-              height: 40vh;                                                                                                                                                                                     
-              position: relative;                                                                                                                                                                               
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .header {                                                                                                                                                                                             
+              background: #f5f5f5;
+          }
+
+          #map {
+              width: 100%;
+              height: 40vh;
+              position: relative;
+          }
+
+          .header {
               background: #fff;
-              padding: 15px;                                                                                                                                                                                    
-              box-shadow: 0 2px 4px rgba(0,0,0,0.1);                                                                                                                                                            
-              position: sticky;                                                                                                                                                                                 
-              top: 0;                                                                                                                                                                                           
-              z-index: 1000;                                                                                                                                                                                    
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .header h1 {                                                                                                                                                                                          
+              padding: 15px;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+              position: sticky;
+              top: 0;
+              z-index: 1000;
+          }
+
+          .header h1 {
               font-size: 20px;
-              color: #333;                                                                                                                                                                                      
-              margin-bottom: 10px;                                                                                                                                                                              
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .location-info {                                                                                                                                                                                      
+              color: #333;
+              margin-bottom: 10px;
+          }
+
+          .location-info {
               font-size: 14px;
-              color: #666;                                                                                                                                                                                      
+              color: #666;
               display: flex;
-              align-items: center;                                                                                                                                                                              
-              gap: 5px;                                                                                                                                                                                         
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .filter-tabs {                                                                                                                                                                                        
+              align-items: center;
+              gap: 5px;
+          }
+
+          .filter-tabs {
               display: flex;
-              gap: 8px;                                                                                                                                                                                         
-              margin-top: 12px;                                                                                                                                                                                 
-              overflow-x: auto;                                                                                                                                                                                 
-              padding-bottom: 5px;                                                                                                                                                                              
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .filter-tab {                                                                                                                                                                                         
+              gap: 8px;
+              margin-top: 12px;
+              overflow-x: auto;
+              padding-bottom: 5px;
+          }
+
+          .filter-tab {
               padding: 6px 14px;
-              background: #f0f0f0;                                                                                                                                                                              
-              border: none;                                                                                                                                                                                     
-              border-radius: 20px;                                                                                                                                                                              
-              font-size: 13px;                                                                                                                                                                                  
-              color: #666;                                                                                                                                                                                      
-              cursor: pointer;                                                                                                                                                                                  
-              white-space: nowrap;                                                                                                                                                                              
-              transition: all 0.3s;                                                                                                                                                                             
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .filter-tab.active {                                                                                                                                                                                  
+              background: #f0f0f0;
+              border: none;
+              border-radius: 20px;
+              font-size: 13px;
+              color: #666;
+              cursor: pointer;
+              white-space: nowrap;
+              transition: all 0.3s;
+          }
+
+          .filter-tab.active {
               background: #1890ff;
-              color: white;                                                                                                                                                                                     
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .type-tag {                                                                                                                                                                                           
+              color: white;
+          }
+
+          .type-tag {
               display: inline-block;
-              padding: 3px 8px;                                                                                                                                                                                 
-              border-radius: 4px;                                                                                                                                                                               
-              font-size: 12px;                                                                                                                                                                                  
-              margin-bottom: 5px;                                                                                                                                                                               
-              color: white;                                                                                                                                                                                     
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .type-餐厅 { background: #ff4d4f; }                                                                                                                                                                   
-          .type-咖啡甜品店 { background: #fa8c16; }                                                                                                                                                             
-          .type-购物 { background: #1890ff; }                                                                                                                                                                   
-                                                                                                                                                                                                                
-          .store-list {                                                                                                                                                                                         
-              padding: 15px;                                                                                                                                                                                    
-          }                                                                                                                                                                                                     
-                  
-          .store-item {                                                                                                                                                                                         
+              padding: 3px 8px;
+              border-radius: 4px;
+              font-size: 12px;
+              margin-bottom: 5px;
+              color: white;
+          }
+
+          .type-餐厅 { background: #ff4d4f; }
+          .type-咖啡甜品店 { background: #fa8c16; }
+          .type-购物 { background: #1890ff; }
+
+          .store-list {
+              padding: 15px;
+          }
+
+          .store-item {
               background: #fff;
-              padding: 15px;                                                                                                                                                                                    
-              margin-bottom: 10px;                                                                                                                                                                              
-              border-radius: 8px;                                                                                                                                                                               
-              box-shadow: 0 1px 3px rgba(0,0,0,0.1);                                                                                                                                                            
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .store-name {                                                                                                                                                                                         
-              font-size: 16px;                                                                                                                                                                                  
-              font-weight: bold;                                                                                                                                                                                
-              color: #333;                                                                                                                                                                                      
-              margin-bottom: 5px;                                                                                                                                                                               
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .store-address {                                                                                                                                                                                      
+              padding: 15px;
+              margin-bottom: 10px;
+              border-radius: 8px;
+              box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+          }
+
+          .store-name {
+              font-size: 16px;
+              font-weight: bold;
+              color: #333;
+              margin-bottom: 5px;
+          }
+
+          .store-address {
               font-size: 14px;
-              color: #666;                                                                                                                                                                                      
-              margin-bottom: 5px;                                                                                                                                                                               
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .store-distance {                                                                                                                                                                                     
+              color: #666;
+              margin-bottom: 5px;
+          }
+
+          .store-distance {
               font-size: 14px;
-              color: #1890ff;                                                                                                                                                                                   
-              font-weight: bold;                                                                                                                                                                                
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .store-notes {                                                                                                                                                                                        
-              font-size: 13px;                                                                                                                                                                                  
-              color: #999;                                                                                                                                                                                      
-              margin-top: 8px;                                                                                                                                                                                  
-              padding-top: 8px;                                                                                                                                                                                 
-              border-top: 1px solid #f0f0f0;                                                                                                                                                                    
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .loading {                                                                                                                                                                                            
-              text-align: center;                                                                                                                                                                               
-              padding: 30px;                                                                                                                                                                                    
-              color: #999;                                                                                                                                                                                      
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .error {                                                                                                                                                                                              
+              color: #1890ff;
+              font-weight: bold;
+          }
+
+          .store-notes {
+              font-size: 13px;
+              color: #999;
+              margin-top: 8px;
+              padding-top: 8px;
+              border-top: 1px solid #f0f0f0;
+          }
+
+          .loading {
+              text-align: center;
+              padding: 30px;
+              color: #999;
+          }
+
+          .error {
               background: #fff3f3;
-              color: #f56c6c;                                                                                                                                                                                   
-              padding: 15px;                                                                                                                                                                                    
-              margin: 15px;                                                                                                                                                                                     
-              border-radius: 8px;                                                                                                                                                                               
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .navigate-btn {                                                                                                                                                                                       
+              color: #f56c6c;
+              padding: 15px;
+              margin: 15px;
+              border-radius: 8px;
+          }
+
+          .navigate-btn {
               display: inline-block;
-              margin-top: 8px;                                                                                                                                                                                  
-              padding: 6px 12px;                                                                                                                                                                                
-              background: #1890ff;                                                                                                                                                                              
-              color: white;                                                                                                                                                                                     
-              text-decoration: none;                                                                                                                                                                            
-              border-radius: 4px;                                                                                                                                                                               
-              font-size: 13px;                                                                                                                                                                                  
-          }                                                                                                                                                                                                     
-      </style>                                                                                                                                                                                                  
-  </head>                                                                                                                                                                                                       
-  <body>                                                                                                                                                                                                        
+              margin-top: 8px;
+              padding: 6px 12px;
+              background: #1890ff;
+              color: white;
+              text-decoration: none;
+              border-radius: 4px;
+              font-size: 13px;
+          }
+
+          .add-btn {
+              position: fixed;
+              bottom: 30px;
+              right: 20px;
+              width: 56px;
+              height: 56px;
+              background: #52c41a;
+              color: white;
+              border: none;
+              border-radius: 50%;
+              font-size: 28px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+              cursor: pointer;
+              z-index: 999;
+          }
+
+          .modal {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0,0,0,0.6);
+              z-index: 1001;
+              overflow-y: auto;
+          }
+
+          .modal.show {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+
+          .modal-content {
+              background: white;
+              width: 90%;
+              max-width: 400px;
+              border-radius: 12px;
+              padding: 20px;
+              margin: 20px;
+          }
+
+          .modal-title {
+              font-size: 18px;
+              font-weight: bold;
+              margin-bottom: 15px;
+          }
+
+          .form-group {
+              margin-bottom: 15px;
+          }
+
+          .form-group label {
+              display: block;
+              font-size: 14px;
+              color: #666;
+              margin-bottom: 5px;
+          }
+
+          .form-group input,
+          .form-group textarea,
+          .form-group select {
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              font-size: 14px;
+          }
+
+          .form-group textarea {
+              resize: vertical;
+              min-height: 60px;
+          }
+
+          .form-buttons {
+              display: flex;
+              gap: 10px;
+              margin-top: 20px;
+          }
+
+          .form-buttons button {
+              flex: 1;
+              padding: 12px;
+              border: none;
+              border-radius: 6px;
+              font-size: 15px;
+              cursor: pointer;
+          }
+
+          .btn-cancel {
+              background: #f0f0f0;
+              color: #666;
+          }
+
+          .btn-submit {
+              background: #1890ff;
+              color: white;
+          }
+
+          .store-actions {
+              margin-top: 10px;
+              display: flex;
+              gap: 8px;
+          }
+
+          .btn-edit, .btn-delete {
+              padding: 4px 10px;
+              border: none;
+              border-radius: 4px;
+              font-size: 12px;
+              cursor: pointer;
+          }
+
+          .btn-edit {
+              background: #1890ff;
+              color: white;
+          }
+
+          .btn-delete {
+              background: #ff4d4f;
+              color: white;
+          }
+      </style>
+  </head>
+  <body>
       <div class="header">
-          <h1>🗺️  我的好店地图</h1>                                                                                                                                                                              
-          <div class="location-info" id="locationInfo">                                                                                                                                                         
-              <span>📍 正在定位...</span>                                                                                                                                                                       
-          </div>                                                                                                                                                                                                
-          <div class="filter-tabs">                                                                                                                                                                             
-              <button class="filter-tab active" data-type="all">全部</button>                                                                                                                                   
-              <button class="filter-tab" data-type="餐厅">🍽️  餐厅</button>                                                                                                                                      
-              <button class="filter-tab" data-type="咖啡甜品店">☕ 咖啡甜品店</button>                                                                                                                          
-              <button class="filter-tab" data-type="购物">🛍️  购物</button>                                                                                                                                      
-          </div>                                                                                                                                                                                                
-      </div>                                                                                                                                                                                                    
-                                                                                                                                                                                                                
-      <div id="map"></div>                                                                                                                                                                                      
-                                                                                                                                                                                                                
-      <div class="store-list" id="storeList">                                                                                                                                                                   
+          <h1>🗺️  我的好店地图</h1>
+          <div class="location-info" id="locationInfo">
+              <span>📍 正在定位...</span>
+          </div>
+          <div class="filter-tabs">
+              <button class="filter-tab active" data-type="all">全部</button>
+              <button class="filter-tab" data-type="餐厅">🍽️  餐厅</button>
+              <button class="filter-tab" data-type="咖啡甜品店">☕ 咖啡甜品店</button>
+              <button class="filter-tab" data-type="购物">🛍️  购物</button>
+          </div>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="store-list" id="storeList">
           <div class="loading">加载中...</div>
-      </div>                                                                                                                                                                                                    
-                  
-      <!-- 引入高德地图 -->                                                                                                                                                                                     
+      </div>
+
+      <!-- 添加店铺按钮 -->
+      <button class="add-btn" onclick="openAddModal()">+</button>
+
+      <!-- 添加/编辑店铺弹窗 -->
+      <div class="modal" id="storeModal">
+          <div class="modal-content">
+              <div class="modal-title" id="modalTitle">添加店铺</div>
+              <form id="storeForm" onsubmit="saveStore(event)">
+                  <div class="form-group">
+                      <label>店铺名称 *</label>
+                      <input type="text" id="storeName" required placeholder="例如:星巴克">
+                  </div>
+                  <div class="form-group">
+                      <label>完整地址 *</label>
+                      <input type="text" id="storeAddress" required placeholder="例如:北京市朝阳区三里屯路11号">
+                  </div>
+                  <div class="form-group">
+                      <label>类型 *</label>
+                      <select id="storeType" required>
+                          <option value="餐厅">🍽️  餐厅</option>
+                          <option value="咖啡甜品店">☕ 咖啡甜品店</option>
+                          <option value="购物">🛍️  购物</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>备注</label>
+                      <textarea id="storeNotes" placeholder="例如:小红书推荐，招牌菜XXX"></textarea>
+                  </div>
+                  <input type="hidden" id="editIndex" value="">
+                  <div class="form-buttons">
+                      <button type="button" class="btn-cancel" onclick="closeModal()">取消</button>
+                      <button type="submit" class="btn-submit">保存</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+
+      <!-- 引入高德地图 -->
       <script src="https://webapi.amap.com/maps?v=2.0&key=8a8eef3bc1ed67f061273cbd53e8062f"></script>
-                                                                                                                                                                                                                
-      <script>                                                                                                                                                                                                  
-          // ============= 配置区域 =============                                                                                                                                                               
-          // 这里需要替换成您的高德地图API Key                                                                                                                                                                  
-          // 申请地址：https://lbs.amap.com/api/javascript-api/guide/abc/prepare                                                                                                                                
-                                                                                                                                                                                                                
-          // ============= 全局变量 =============                                                                                                                                                               
-          let map;                                                                                                                                                                                              
-          let userLocation = null;                                                                                                                                                                              
-          let stores = [];                                                                                                                                                                                      
-          let allStores = [];                                                                                                                                                                                   
-          let markers = [];                                                                                                                                                                                     
-          let currentFilter = 'all';                                                                                                                                                                            
-                                                                                                                                                                                                                
-          // ============= 初始化 =============                                                                                                                                                                 
-          window.onload = function() {                                                                                                                                                                          
-              initMap();                                                                                                                                                                                        
-              loadStores();                                                                                                                                                                                     
-          };                                                                                                                                                                                                    
-                                                                                                                                                                                                                
-          // 初始化地图                                                                                                                                                                                         
-          function initMap() {                                                                                                                                                                                  
-              map = new AMap.Map('map', {                                                                                                                                                                       
-                  zoom: 13,                                                                                                                                                                                     
-                  center: [116.397428, 39.90923], // 默认北京                                                                                                                                                   
-                  viewMode: '3D'                                                                                                                                                                                
-              });                                                                                                                                                                                               
-                                                                                                                                                                                                                
-              // 获取用户位置                                                                                                                                                                                   
+
+      <script>
+          // ============= 配置区域 =============
+          // 这里需要替换成您的高德地图API Key
+          // 申请地址：https://lbs.amap.com/api/javascript-api/guide/abc/prepare
+
+          // ============= 全局变量 =============
+          let map;
+          let userLocation = null;
+          let stores = [];
+          let allStores = [];
+          let markers = [];
+          let currentFilter = 'all';
+
+          // ============= 初始化 =============
+          window.onload = function() {
+              initMap();
+              loadStores();
+          };
+
+          // 初始化地图
+          function initMap() {
+              map = new AMap.Map('map', {
+                  zoom: 13,
+                  center: [116.397428, 39.90923], // 默认北京
+                  viewMode: '3D'
+              });
+
+              // 获取用户位置
               getUserLocation();
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          // 获取用户当前位置                                                                                                                                                                                   
-          function getUserLocation() {                                                                                                                                                                          
-              if (navigator.geolocation) {                                                                                                                                                                      
-                  navigator.geolocation.getCurrentPosition(                                                                                                                                                     
-                      function(position) {                                                                                                                                                                      
-                          userLocation = {                                                                                                                                                                      
-                              lng: position.coords.longitude,                                                                                                                                                   
-                              lat: position.coords.latitude                                                                                                                                                     
-                          };                                                                                                                                                                                    
-                                                                                                                                                                                                                
-                          // 更新地图中心                                                                                                                                                                       
-                          map.setCenter([userLocation.lng, userLocation.lat]);                                                                                                                                  
-                                                                                                                                                                                                                
-                          // 在地图上标记当前位置                                                                                                                                                               
-                          new AMap.Marker({                                                                                                                                                                     
-                              position: [userLocation.lng, userLocation.lat],                                                                                                                                   
-                              icon: '//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png',                                                                                                 
-                              title: '我的位置'                                                                                                                                                                 
-                          }).setMap(map);                                                                                                                                                                       
-                                                                                                                                                                                                                
-                          // 获取当前位置名称                                                                                                                                                                   
+          }
+
+          // 获取用户当前位置
+          function getUserLocation() {
+              if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(
+                      function(position) {
+                          userLocation = {
+                              lng: position.coords.longitude,
+                              lat: position.coords.latitude
+                          };
+
+                          // 更新地图中心
+                          map.setCenter([userLocation.lng, userLocation.lat]);
+
+                          // 在地图上标记当前位置
+                          new AMap.Marker({
+                              position: [userLocation.lng, userLocation.lat],
+                              icon: '//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png',
+                              title: '我的位置'
+                          }).setMap(map);
+
+                          // 获取当前位置名称
                           getCurrentLocationName(userLocation);
-                                                                                                                                                                                                                
-                          // 如果已经加载了店铺，重新排序                                                                                                                                                       
-                          if (stores.length > 0) {                                                                                                                                                              
-                              displayStores();                                                                                                                                                                  
-                          }                                                                                                                                                                                     
-                      },                                                                                                                                                                                        
-                      function(error) {                                                                                                                                                                         
-                          console.error('定位失败:', error);                                                                                                                                                    
-                          document.getElementById('locationInfo').innerHTML = '📍 定位失败，请允许浏览器访问位置';                                                                                              
-                      }                                                                                                                                                                                         
-                  );                                                                                                                                                                                            
-              }                                                                                                                                                                                                 
-          }       
-                                                                                                                                                                                                                
-          // 获取当前位置名称                                                                                                                                                                                   
-          function getCurrentLocationName(location) {                                                                                                                                                           
-              AMap.plugin('AMap.Geocoder', function() {                                                                                                                                                         
-                  const geocoder = new AMap.Geocoder();                                                                                                                                                         
-                  geocoder.getAddress([location.lng, location.lat], function(status, result) {                                                                                                                  
-                      if (status === 'complete' && result.info === 'OK') {                                                                                                                                      
-                          const address = result.regeocode.formattedAddress;                                                                                                                                    
-                          document.getElementById('locationInfo').innerHTML = `📍 ${address}`;                                                                                                                  
-                      }                                                                                                                                                                                         
-                  });                                                                                                                                                                                           
-              });                                                                                                                                                                                               
-          }                                                                                                                                                                                                     
-                  
-          // 加载店铺数据                                                                                                                                                                                       
+
+                          // 如果已经加载了店铺，重新排序
+                          if (stores.length > 0) {
+                              displayStores();
+                          }
+                      },
+                      function(error) {
+                          console.error('定位失败:', error);
+                          document.getElementById('locationInfo').innerHTML = '📍 定位失败，请允许浏览器访问位置';
+                      }
+                  );
+              }
+          }
+
+          // 获取当前位置名称
+          function getCurrentLocationName(location) {
+              AMap.plugin('AMap.Geocoder', function() {
+                  const geocoder = new AMap.Geocoder();
+                  geocoder.getAddress([location.lng, location.lat], function(status, result) {
+                      if (status === 'complete' && result.info === 'OK') {
+                          const address = result.regeocode.formattedAddress;
+                          document.getElementById('locationInfo').innerHTML = `📍 ${address}`;
+                      }
+                  });
+              });
+          }
+
+          // 加载店铺数据
           function loadStores() {
-              // 店铺数据（直接写在这里，方便修改）                                                                                                                                                             
-              // type 可选值：餐厅、咖啡甜品店、购物                                                                                                                                                            
-              allStores = [                                                                                                                                                                                     
-                  {                                                                                                                                                                                             
-                      "name": "宴遇",                                                                                                                                                                           
-                      "address": "北京市朝阳区建国路87号北京SKP 6层",                                                                                                                                           
-                      "notes": "小红书推荐，福建菜",                                                                                                                                                            
-                      "type": "餐厅"                                                                                                                                                                            
-                  },                                                                                                                                                                                            
-                  {                                                                                                                                                                                             
-                      "name": "DUMO",                                                                                                                                                                           
-                      "address": "北京市朝阳区新源街63号103e",                                                                                                                                                  
-                      "notes": "西餐招牌菜提拉米苏",                                                                                                                                                            
-                      "type": "餐厅"                                                                                                                                                                            
-                  }                                                                                                                                                                                             
-              ];                                                                                                                                                                                                
-              stores = allStores;                                                                                                                                                                               
-              setupFilters();                                                                                                                                                                                   
-              geocodeStores();                                                                                                                                                                                  
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          // 设置筛选按钮                                                                                                                                                                                       
-          function setupFilters() {
-              const tabs = document.querySelectorAll('.filter-tab');                                                                                                                                            
-              tabs.forEach(tab => {                                                                                                                                                                             
-                  tab.addEventListener('click', function() {                                                                                                                                                    
-                      // 更新按钮状态                                                                                                                                                                           
-                      tabs.forEach(t => t.classList.remove('active'));                                                                                                                                          
-                      this.classList.add('active');                                                                                                                                                             
-                                                                                                                                                                                                                
-                      // 筛选店铺                                                                                                                                                                               
-                      currentFilter = this.dataset.type;                                                                                                                                                        
-                      filterStores(currentFilter);                                                                                                                                                              
-                  });                                                                                                                                                                                           
-              });                                                                                                                                                                                               
-          }                                                                                                                                                                                                     
-                  
-          // 筛选店铺                                                                                                                                                                                           
-          function filterStores(type) {
-              if (type === 'all') {                                                                                                                                                                             
-                  stores = allStores;                                                                                                                                                                           
-              } else {                                                                                                                                                                                          
-                  stores = allStores.filter(store => store.type === type);                                                                                                                                      
-              }                                                                                                                                                                                                 
-                                                                                                                                                                                                                
-              // 更新地图标记                                                                                                                                                                                   
-              markers.forEach(marker => marker.setMap(null));
-              markers = [];                                                                                                                                                                                     
-                  
-              // 重新显示                                                                                                                                                                                       
+              // 默认店铺数据
+              const defaultStores = [
+                  {
+                      "name": "宴遇",
+                      "address": "北京市朝阳区建国路87号北京SKP 6层",
+                      "notes": "小红书推荐，福建菜",
+                      "type": "餐厅"
+                  },
+                  {
+                      "name": "DUMO",
+                      "address": "北京市朝阳区新源街63号103e",
+                      "notes": "西餐招牌菜提拉米苏",
+                      "type": "餐厅"
+                  },
+                  {
+                      "name": "charcoal煤球",
+                      "address": "北京市朝阳区幸福一村西里甲6号",
+                      "notes": "西餐",
+                      "type": "餐厅"
+                  }
+              ];
+
+              // 从localStorage读取数据，如果没有则使用默认数据
+              const savedStores = localStorage.getItem('myStores');
+              if (savedStores) {
+                  try {
+                      allStores = JSON.parse(savedStores);
+                  } catch (e) {
+                      allStores = defaultStores;
+                  }
+              } else {
+                  allStores = defaultStores;
+                  // 首次使用，保存默认数据
+                  localStorage.setItem('myStores', JSON.stringify(defaultStores));
+              }
+
+              stores = allStores;
+              setupFilters();
               geocodeStores();
-          }                                                                                                                                                                                                     
-                  
-          // 将地址转换为经纬度                                                                                                                                                                                 
+          }
+
+          // 保存店铺数据到localStorage
+          function saveToLocalStorage() {
+              localStorage.setItem('myStores', JSON.stringify(allStores));
+          }
+
+          // 打开添加店铺弹窗
+          function openAddModal() {
+              document.getElementById('modalTitle').textContent = '添加店铺';
+              document.getElementById('storeForm').reset();
+              document.getElementById('editIndex').value = '';
+              document.getElementById('storeModal').classList.add('show');
+          }
+
+          // 打开编辑店铺弹窗
+          function openEditModal(index) {
+              const store = allStores[index];
+              document.getElementById('modalTitle').textContent = '编辑店铺';
+              document.getElementById('storeName').value = store.name;
+              document.getElementById('storeAddress').value = store.address;
+              document.getElementById('storeType').value = store.type;
+              document.getElementById('storeNotes').value = store.notes || '';
+              document.getElementById('editIndex').value = index;
+              document.getElementById('storeModal').classList.add('show');
+          }
+
+          // 关闭弹窗
+          function closeModal() {
+              document.getElementById('storeModal').classList.remove('show');
+          }
+
+          // 保存店铺
+          function saveStore(event) {
+              event.preventDefault();
+
+              const name = document.getElementById('storeName').value.trim();
+              const address = document.getElementById('storeAddress').value.trim();
+              const type = document.getElementById('storeType').value;
+              const notes = document.getElementById('storeNotes').value.trim();
+              const editIndex = document.getElementById('editIndex').value;
+
+              const storeData = { name, address, type, notes };
+
+              if (editIndex !== '') {
+                  // 编辑现有店铺
+                  allStores[parseInt(editIndex)] = storeData;
+              } else {
+                  // 添加新店铺
+                  allStores.push(storeData);
+              }
+
+              // 保存到localStorage
+              saveToLocalStorage();
+
+              // 关闭弹窗
+              closeModal();
+
+              // 重新加载店铺
+              stores = allStores;
+              markers.forEach(marker => marker.setMap(null));
+              markers = [];
+              geocodeStores();
+          }
+
+          // 删除店铺
+          function deleteStore(index) {
+              if (confirm('确定要删除这个店铺吗？')) {
+                  allStores.splice(index, 1);
+                  saveToLocalStorage();
+
+                  // 重新加载店铺
+                  stores = allStores;
+                  markers.forEach(marker => marker.setMap(null));
+                  markers = [];
+                  geocodeStores();
+              }
+          }
+
+          // 设置筛选按钮
+          function setupFilters() {
+              const tabs = document.querySelectorAll('.filter-tab');
+              tabs.forEach(tab => {
+                  tab.addEventListener('click', function() {
+                      // 更新按钮状态
+                      tabs.forEach(t => t.classList.remove('active'));
+                      this.classList.add('active');
+
+                      // 筛选店铺
+                      currentFilter = this.dataset.type;
+                      filterStores(currentFilter);
+                  });
+              });
+          }
+
+          // 筛选店铺
+          function filterStores(type) {
+              if (type === 'all') {
+                  stores = allStores;
+              } else {
+                  stores = allStores.filter(store => store.type === type);
+              }
+
+              // 更新地图标记
+              markers.forEach(marker => marker.setMap(null));
+              markers = [];
+
+              // 重新显示
+              geocodeStores();
+          }
+
+          // 将地址转换为经纬度
           function geocodeStores() {
-              AMap.plugin('AMap.Geocoder', function() {                                                                                                                                                         
-                  const geocoder = new AMap.Geocoder();                                                                                                                                                         
-                  let completed = 0;                                                                                                                                                                            
-                                                                                                                                                                                                                
+              AMap.plugin('AMap.Geocoder', function() {
+                  const geocoder = new AMap.Geocoder();
+                  let completed = 0;
+
                   stores.forEach((store, index) => {
                       geocoder.getLocation(store.address, function(status, result) {
                           completed++;
 
                           if (status === 'complete' && result.info === 'OK') {
                               const location = result.geocodes[0].location;
-                              stores[index].lng = location.lng;                                                                                                                                                 
-                              stores[index].lat = location.lat;                                                                                                                                                 
-                                                                                                                                                                                                                
-                              // 根据类型选择标记颜色                                                                                                                                                           
-                              let iconColor = 'blue';                                                                                                                                                           
-                              if (store.type === '餐厅') iconColor = 'red';                                                                                                                                     
-                              else if (store.type === '咖啡甜品店') iconColor = 'orange';                                                                                                                       
-                              else if (store.type === '购物') iconColor = 'blue';                                                                                                                               
-                                                                                                                                                                                                                
-                              // 在地图上添加标记                                                                                                                                                               
-                              const marker = new AMap.Marker({                                                                                                                                                  
-                                  position: [location.lng, location.lat],                                                                                                                                       
-                                  title: store.name,                                                                                                                                                            
-                                  icon: `//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-${iconColor}.png`                                                                                         
-                              });                                                                                                                                                                               
-                              marker.setMap(map);                                                                                                                                                               
-                              markers.push(marker);                                                                                                                                                             
-                  
-                              // 点击标记显示信息                                                                                                                                                               
+                              stores[index].lng = location.lng;
+                              stores[index].lat = location.lat;
+
+                              // 根据类型选择标记颜色
+                              let iconColor = 'blue';
+                              if (store.type === '餐厅') iconColor = 'red';
+                              else if (store.type === '咖啡甜品店') iconColor = 'orange';
+                              else if (store.type === '购物') iconColor = 'blue';
+
+                              // 在地图上添加标记
+                              const marker = new AMap.Marker({
+                                  position: [location.lng, location.lat],
+                                  title: store.name,
+                                  icon: `//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-${iconColor}.png`
+                              });
+                              marker.setMap(map);
+                              markers.push(marker);
+
+                              // 点击标记显示信息
                               marker.on('click', function() {
-                                  const typeTag = store.type ? `<span style="padding:2px 6px;background:#${iconColor === 'red' ? 'ff4d4f' : iconColor === 'orange' ? 'fa8c16' :                                 
-  '1890ff'};color:white;border-radius:3px;font-size:11px;margin-left:5px;">${store.type}</span>` : '';                                                                                                          
-                                  const infoWindow = new AMap.InfoWindow({                                                                                                                                      
-                                      content: `<div style="padding:10px;">                                                                                                                                     
-                                          <h3 style="margin:0 0 5px 0;">${store.name}${typeTag}</h3>                                                                                                            
-                                          <p style="margin:0;font-size:12px;color:#666;">${store.address}</p>                                                                                                   
-                                      </div>`                                                                                                                                                                   
-                                  });                                                                                                                                                                           
-                                  infoWindow.open(map, marker.getPosition());                                                                                                                                   
-                              });                                                                                                                                                                               
+                                  const typeTag = store.type ? `<span style="padding:2px 6px;background:#${iconColor === 'red' ? 'ff4d4f' : iconColor === 'orange' ? 'fa8c16' :
+  '1890ff'};color:white;border-radius:3px;font-size:11px;margin-left:5px;">${store.type}</span>` : '';
+                                  const infoWindow = new AMap.InfoWindow({
+                                      content: `<div style="padding:10px;">
+                                          <h3 style="margin:0 0 5px 0;">${store.name}${typeTag}</h3>
+                                          <p style="margin:0;font-size:12px;color:#666;">${store.address}</p>
+                                      </div>`
+                                  });
+                                  infoWindow.open(map, marker.getPosition());
+                              });
                           } else {
-                              console.error('地址解析失败:', store.address);                                                                                                                                    
-                          }                                                                                                                                                                                     
-                                                                                                                                                                                                                
-                          // 所有地址解析完成后显示列表                                                                                                                                                         
-                          if (completed === stores.length) {                                                                                                                                                    
-                              displayStores();                                                                                                                                                                  
+                              console.error('地址解析失败:', store.address);
                           }
-                      });                                                                                                                                                                                       
+
+                          // 所有地址解析完成后显示列表
+                          if (completed === stores.length) {
+                              displayStores();
+                          }
+                      });
                   });
-              });                                                                                                                                                                                               
+              });
           }
-                                                                                                                                                                                                                
-          // 计算两点之间的距离（单位：公里）                                                                                                                                                                   
+
+          // 计算两点之间的距离（单位：公里）
           function calculateDistance(lat1, lng1, lat2, lng2) {
-              const R = 6371; // 地球半径（公里）                                                                                                                                                               
-              const dLat = (lat2 - lat1) * Math.PI / 180;                                                                                                                                                       
-              const dLng = (lng2 - lng1) * Math.PI / 180;                                                                                                                                                       
-              const a = Math.sin(dLat/2) * Math.sin(dLat/2) +                                                                                                                                                   
-                       Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *                                                                                                                        
-                       Math.sin(dLng/2) * Math.sin(dLng/2);                                                                                                                                                     
-              const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));                                                                                                                                           
-              return R * c;                                                                                                                                                                                     
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          // 显示店铺列表                                                                                                                                                                                       
+              const R = 6371; // 地球半径（公里）
+              const dLat = (lat2 - lat1) * Math.PI / 180;
+              const dLng = (lng2 - lng1) * Math.PI / 180;
+              const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                       Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                       Math.sin(dLng/2) * Math.sin(dLng/2);
+              const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+              return R * c;
+          }
+
+          // 显示店铺列表
           function displayStores() {
-              // 如果有用户位置，计算距离并排序                                                                                                                                                                 
-              if (userLocation) {                                                                                                                                                                               
-                  stores.forEach(store => {                                                                                                                                                                     
-                      if (store.lng && store.lat) {                                                                                                                                                             
-                          store.distance = calculateDistance(                                                                                                                                                   
-                              userLocation.lat, userLocation.lng,                                                                                                                                               
-                              store.lat, store.lng                                                                                                                                                              
-                          );                                                                                                                                                                                    
-                      }                                                                                                                                                                                         
-                  });                                                                                                                                                                                           
-                                                                                                                                                                                                                
-                  // 按距离排序                                                                                                                                                                                 
-                  stores.sort((a, b) => (a.distance || 999999) - (b.distance || 999999));                                                                                                                       
-              }                                                                                                                                                                                                 
-                                                                                                                                                                                                                
-              // 生成列表HTML                                                                                                                                                                                   
-              const listHtml = stores.map(store => {                                                                                                                                                            
-                  let distanceHtml = '';                                                                                                                                                                        
-                  if (store.distance !== undefined) {                                                                                                                                                           
-                      if (store.distance < 1) {                                                                                                                                                                 
-                          distanceHtml = `<div class="store-distance">📍 距离您 ${(store.distance * 1000).toFixed(0)} 米</div>`;                                                                                
-                      } else {                                                                                                                                                                                  
-                          distanceHtml = `<div class="store-distance">📍 距离您 ${store.distance.toFixed(1)} 公里</div>`;                                                                                       
-                      }                                                                                                                                                                                         
-                  }                                                                                                                                                                                             
-                                                                                                                                                                                                                
-                  let notesHtml = '';                                                                                                                                                                           
+              // 如果有用户位置，计算距离并排序
+              if (userLocation) {
+                  stores.forEach(store => {
+                      if (store.lng && store.lat) {
+                          store.distance = calculateDistance(
+                              userLocation.lat, userLocation.lng,
+                              store.lat, store.lng
+                          );
+                      }
+                  });
+
+                  // 按距离排序
+                  stores.sort((a, b) => (a.distance || 999999) - (b.distance || 999999));
+              }
+
+              // 生成列表HTML
+              const listHtml = stores.map((store, idx) => {
+                  // 找到该店铺在allStores中的索引（用于编辑和删除）
+                  const realIndex = allStores.findIndex(s =>
+                      s.name === store.name && s.address === store.address
+                  );
+
+                  let distanceHtml = '';
+                  if (store.distance !== undefined) {
+                      if (store.distance < 1) {
+                          distanceHtml = `<div class="store-distance">📍 距离您 ${(store.distance * 1000).toFixed(0)} 米</div>`;
+                      } else {
+                          distanceHtml = `<div class="store-distance">📍 距离您 ${store.distance.toFixed(1)} 公里</div>`;
+                      }
+                  }
+
+                  let notesHtml = '';
                   if (store.notes) {
-                      notesHtml = `<div class="store-notes">💭 ${store.notes}</div>`;                                                                                                                           
-                  }                                                                                                                                                                                             
-                                                                                                                                                                                                                
-                  let navUrl = '';                                                                                                                                                                              
+                      notesHtml = `<div class="store-notes">💭 ${store.notes}</div>`;
+                  }
+
+                  let navUrl = '';
                   if (store.lng && store.lat) {
-                      navUrl = `https://uri.amap.com/navigation?to=${store.lng},${store.lat},${store.name}&mode=car&policy=1&src=myapp&coordinate=gaode&callnative=0`;                                          
-                  }                                                                                                                                                                                             
-                                                                                                                                                                                                                
-                  let typeHtml = '';                                                                                                                                                                            
+                      navUrl = `https://uri.amap.com/navigation?to=${store.lng},${store.lat},${store.name}&mode=car&policy=1&src=myapp&coordinate=gaode&callnative=0`;
+                  }
+
+                  let typeHtml = '';
                   if (store.type) {
-                      typeHtml = `<span class="type-tag type-${store.type}">${store.type}</span>`;                                                                                                              
-                  }                                                                                                                                                                                             
-                                                                                                                                                                                                                
-                  return `                                                                                                                                                                                      
+                      typeHtml = `<span class="type-tag type-${store.type}">${store.type}</span>`;
+                  }
+
+                  return `
                       <div class="store-item">
-                          ${typeHtml}                                                                                                                                                                           
-                          <div class="store-name">${store.name}</div>                                                                                                                                           
-                          <div class="store-address">${store.address}</div>                                                                                                                                     
-                          ${distanceHtml}                                                                                                                                                                       
-                          ${notesHtml}                                                                                                                                                                          
-                          ${navUrl ? `<a href="${navUrl}" class="navigate-btn">🧭 导航</a>` : ''}                                                                                                               
-                      </div>                                                                                                                                                                                    
-                  `;                                                                                                                                                                                            
-              }).join('');                                                                                                                                                                                      
-                                                                                                                                                                                                                
-              document.getElementById('storeList').innerHTML = listHtml || '<div class="loading">暂无店铺数据</div>';                                                                                           
-          }                                                                                                                                                                                                     
-      </script>                                                                                                                                                                                                 
-  </body>                                                                                                                                                                                                       
+                          ${typeHtml}
+                          <div class="store-name">${store.name}</div>
+                          <div class="store-address">${store.address}</div>
+                          ${distanceHtml}
+                          ${notesHtml}
+                          <div class="store-actions">
+                              ${navUrl ? `<a href="${navUrl}" class="navigate-btn">🧭 导航</a>` : ''}
+                              <button class="btn-edit" onclick="openEditModal(${realIndex})">✏️  编辑</button>
+                              <button class="btn-delete" onclick="deleteStore(${realIndex})">🗑️  删除</button>
+                          </div>
+                      </div>
+                  `;
+              }).join('');
+
+              document.getElementById('storeList').innerHTML = listHtml || '<div class="loading">暂无店铺数据</div>';
+          }
+      </script>
+  </body>
   </html>
