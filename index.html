@@ -3,58 +3,58 @@
   <head>                                                                                                                                                                                                        
       <meta charset="UTF-8">                                                                                                                                                                                    
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">                                                                                               
-      <title>我的好店地图</title>
-      <style>
-          * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
+      <title>我的好店地图</title>                                                                                                                                                                               
+      <style>                                                                                                                                                                                                   
+          * {                                                                                                                                                                                                   
+              margin: 0;                                                                                                                                                                                        
+              padding: 0;                                                                                                                                                                                       
+              box-sizing: border-box;                                                                                                                                                                           
           }                                                                                                                                                                                                     
-  
+                                                                                                                                                                                                                
           body {                                                                                                                                                                                                
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;                                                                                                                         
               background: #f5f5f5;                                                                                                                                                                              
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           #map {                                                                                                                                                                                                
               width: 100%;                                                                                                                                                                                      
               height: 40vh;                                                                                                                                                                                     
-              position: relative;
+              position: relative;                                                                                                                                                                               
           }                                                                                                                                                                                                     
-                  
+                                                                                                                                                                                                                
           .header {                                                                                                                                                                                             
-              background: #fff;
+              background: #fff;                                                                                                                                                                                 
               padding: 15px;                                                                                                                                                                                    
               box-shadow: 0 2px 4px rgba(0,0,0,0.1);                                                                                                                                                            
               position: sticky;                                                                                                                                                                                 
               top: 0;                                                                                                                                                                                           
               z-index: 1000;                                                                                                                                                                                    
           }                                                                                                                                                                                                     
-                  
+                                                                                                                                                                                                                
           .header h1 {                                                                                                                                                                                          
-              font-size: 20px;
+              font-size: 20px;                                                                                                                                                                                  
               color: #333;                                                                                                                                                                                      
               margin-bottom: 10px;                                                                                                                                                                              
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .location-info {                                                                                                                                                                                      
-              font-size: 14px;
+              font-size: 14px;                                                                                                                                                                                
               color: #666;                                                                                                                                                                                      
-              display: flex;
+              display: flex;                                                                                                                                                                                  
               align-items: center;                                                                                                                                                                              
               gap: 5px;                                                                                                                                                                                         
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .filter-tabs {                                                                                                                                                                                        
-              display: flex;
+              display: flex;                                                                                                                                                                                  
               gap: 8px;                                                                                                                                                                                         
-              margin-top: 12px;                                                                                                                                                                                 
+              margin-top: 12px;                                                                                                                                                                               
               overflow-x: auto;                                                                                                                                                                                 
               padding-bottom: 5px;                                                                                                                                                                              
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .filter-tab {                                                                                                                                                                                         
-              padding: 6px 14px;
+              padding: 6px 14px;                                                                                                                                                                              
               background: #f0f0f0;                                                                                                                                                                              
               border: none;                                                                                                                                                                                     
               border-radius: 20px;                                                                                                                                                                              
@@ -66,12 +66,12 @@
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .filter-tab.active {                                                                                                                                                                                  
-              background: #1890ff;
+              background: #1890ff;                                                                                                                                                                            
               color: white;                                                                                                                                                                                     
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .type-tag {                                                                                                                                                                                           
-              display: inline-block;                                                                                                                                                                            
+              display: inline-block;                                                                                                                                                                          
               padding: 3px 8px;                                                                                                                                                                                 
               border-radius: 4px;                                                                                                                                                                               
               font-size: 12px;                                                                                                                                                                                  
@@ -103,13 +103,13 @@
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .store-address {                                                                                                                                                                                      
-              font-size: 14px;
+              font-size: 14px;                                                                                                                                                                                
               color: #666;                                                                                                                                                                                      
               margin-bottom: 5px;                                                                                                                                                                               
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .store-distance {                                                                                                                                                                                     
-              font-size: 14px;
+              font-size: 14px;                                                                                                                                                                                
               color: #1890ff;                                                                                                                                                                                   
               font-weight: bold;                                                                                                                                                                                
           }                                                                                                                                                                                                     
@@ -129,7 +129,7 @@
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .error {                                                                                                                                                                                              
-              background: #fff3f3;
+              background: #fff3f3;                                                                                                                                                                            
               color: #f56c6c;                                                                                                                                                                                   
               padding: 15px;                                                                                                                                                                                    
               margin: 15px;                                                                                                                                                                                     
@@ -164,9 +164,9 @@
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .modal {                                                                                                                                                                                              
-              display: none;
+              display: none;                                                                                                                                                                                  
               position: fixed;                                                                                                                                                                                  
-              top: 0;
+              top: 0;                                                                                                                                                                                         
               left: 0;                                                                                                                                                                                          
               right: 0;                                                                                                                                                                                         
               bottom: 0;                                                                                                                                                                                        
@@ -199,16 +199,16 @@
           .form-group {                                                                                                                                                                                         
               margin-bottom: 15px;                                                                                                                                                                              
           }                                                                                                                                                                                                     
-                  
-          .form-group label {
-              display: block;
+                                                                                                                                                                                                              
+          .form-group label {                                                                                                                                                                                   
+              display: block;                                                                                                                                                                                 
               font-size: 14px;                                                                                                                                                                                  
-              color: #666;
+              color: #666;                                                                                                                                                                                      
               margin-bottom: 5px;                                                                                                                                                                               
-          }       
+          }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .form-group input,                                                                                                                                                                                    
-          .form-group textarea,
+          .form-group textarea,                                                                                                                                                                               
           .form-group select {                                                                                                                                                                                  
               width: 100%;                                                                                                                                                                                      
               padding: 10px;                                                                                                                                                                                    
@@ -221,157 +221,206 @@
               resize: vertical;                                                                                                                                                                                 
               min-height: 60px;                                                                                                                                                                                 
           }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
+   
           .form-buttons {                                                                                                                                                                                       
-              display: flex;
+              display: flex;                                                                                                                                                                                  
               gap: 10px;                                                                                                                                                                                        
-              margin-top: 20px;
+              margin-top: 20px;                                                                                                                                                                                 
           }                                                                                                                                                                                                     
-                  
+                                                                                                                                                                                                                
           .form-buttons button {                                                                                                                                                                                
-              flex: 1;
-              padding: 12px;                                                                                                                                                                                    
+              flex: 1;                                                                                                                                                                                        
+              padding: 12px;
               border: none;                                                                                                                                                                                     
-              border-radius: 6px;                                                                                                                                                                               
+              border-radius: 6px;
               font-size: 15px;                                                                                                                                                                                  
               cursor: pointer;                                                                                                                                                                                  
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           .btn-cancel {                                                                                                                                                                                         
-              background: #f0f0f0;                                                                                                                                                                              
-              color: #666;                                                                                                                                                                                      
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .btn-submit {                                                                                                                                                                                         
-              background: #1890ff;                                                                                                                                                                              
-              color: white;                                                                                                                                                                                     
-          }                                                                                                                                                                                                     
-  
-          .store-actions {                                                                                                                                                                                      
-              margin-top: 10px;
-              display: flex;                                                                                                                                                                                    
-              gap: 8px;                                                                                                                                                                                         
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .btn-edit, .btn-delete {                                                                                                                                                                              
-              padding: 4px 10px;
-              border: none;                                                                                                                                                                                     
-              border-radius: 4px;                                                                                                                                                                               
-              font-size: 12px;                                                                                                                                                                                  
-              cursor: pointer;                                                                                                                                                                                  
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          .btn-edit {                                                                                                                                                                                           
+              background: #f0f0f0;                                                                                                                                                                            
+              color: #666;
+          }
+
+          .btn-submit {
               background: #1890ff;
-              color: white;                                                                                                                                                                                     
-          }       
-                                                                                                                                                                                                                
-          .btn-delete {                                                                                                                                                                                         
+              color: white;
+          }                                                                                                                                                                                                     
+   
+          .store-actions {                                                                                                                                                                                      
+              margin-top: 10px;                                                                                                                                                                               
+              display: flex;
+              gap: 8px;
+          }
+
+          .btn-edit, .btn-delete {
+              padding: 4px 10px;
+              border: none;
+              border-radius: 4px;
+              font-size: 12px;
+              cursor: pointer;
+          }
+
+          .btn-edit {
+              background: #1890ff;
+              color: white;
+          }
+
+          .btn-delete {
               background: #ff4d4f;
-              color: white;                                                                                                                                                                                     
-          }                                                                                                                                                                                                     
-      </style>                                                                                                                                                                                                  
-  </head>                                                                                                                                                                                                       
-  <body>                                                                                                                                                                                                        
+              color: white;
+          }
+
+          .import-btn {
+              position: fixed;
+              bottom: 100px;
+              right: 20px;
+              width: 56px;
+              height: 56px;
+              background: #faad14;
+              color: white;
+              border: none;
+              border-radius: 50%;
+              font-size: 24px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+              cursor: pointer;
+              z-index: 999;
+          }
+
+          .import-textarea {
+              width: 100%;
+              min-height: 200px;
+              padding: 10px;                                                                                                                                                                                    
+              border: 1px solid #ddd;
+              border-radius: 6px;                                                                                                                                                                               
+              font-size: 12px;                                                                                                                                                                                
+              font-family: monospace;
+              resize: vertical;
+          }
+      </style>
+  </head>
+  <body>
       <div class="header">
-          <h1>🗺️  我的好店地图</h1>                                                                                                                                                                              
-          <div class="location-info" id="locationInfo">                                                                                                                                                         
-              <span>📍 正在定位...</span>                                                                                                                                                                       
-          </div>                                                                                                                                                                                                
-          <div class="filter-tabs">                                                                                                                                                                             
-              <button class="filter-tab active" data-type="all">全部</button>                                                                                                                                   
-              <button class="filter-tab" data-type="餐厅">🍽️  餐厅</button>                                                                                                                                      
-              <button class="filter-tab" data-type="咖啡甜品店">☕ 咖啡甜品店</button>                                                                                                                          
-              <button class="filter-tab" data-type="购物">🛍️  购物</button>                                                                                                                                      
-          </div>                                                                                                                                                                                                
-      </div>                                                                                                                                                                                                    
-                                                                                                                                                                                                                
+          <h1>🗺️  我的好店地图</h1>
+          <div class="location-info" id="locationInfo">
+              <span>📍 正在定位...</span>
+          </div>
+          <div class="filter-tabs">
+              <button class="filter-tab active" data-type="all">全部</button>
+              <button class="filter-tab" data-type="餐厅">🍽️  餐厅</button>
+              <button class="filter-tab" data-type="咖啡甜品店">☕ 咖啡甜品店</button>
+              <button class="filter-tab" data-type="购物">🛍️  购物</button>
+          </div>
+      </div>
+
       <div id="map"></div>                                                                                                                                                                                      
-                  
+   
       <div class="store-list" id="storeList">                                                                                                                                                                   
-          <div class="loading">加载中...</div>
-      </div>                                                                                                                                                                                                    
-                                                                                                                                                                                                                
+          <div class="loading">加载中...</div>                                                                                                                                                                
+      </div>
+
       <!-- 添加店铺按钮 -->                                                                                                                                                                                     
-      <button class="add-btn" onclick="openAddModal()">+</button>                                                                                                                                               
+      <button class="add-btn" onclick="openAddModal()">+</button>
                                                                                                                                                                                                                 
-      <!-- 添加/编辑店铺弹窗 -->                                                                                                                                                                                
-      <div class="modal" id="storeModal">                                                                                                                                                                       
-          <div class="modal-content">                                                                                                                                                                           
-              <div class="modal-title" id="modalTitle">添加店铺</div>                                                                                                                                           
-              <form id="storeForm" onsubmit="saveStore(event)">                                                                                                                                                 
-                  <div class="form-group">                                                                                                                                                                      
-                      <label>店铺名称 *</label>                                                                                                                                                                 
-                      <input type="text" id="storeName" required placeholder="例如：星巴克">                                                                                                                    
+      <!-- 批量导入按钮 -->                                                                                                                                                                                   
+      <button class="import-btn" onclick="openImportModal()" title="批量导入">📥</button>
+
+      <!-- 添加/编辑店铺弹窗 -->
+      <div class="modal" id="storeModal">
+          <div class="modal-content">
+              <div class="modal-title" id="modalTitle">添加店铺</div>
+              <form id="storeForm" onsubmit="saveStore(event)">
+                  <div class="form-group">
+                      <label>店铺名称 *</label>
+                      <input type="text" id="storeName" required placeholder="例如：星巴克">
                   </div>                                                                                                                                                                                        
-                  <div class="form-group">                                                                                                                                                                      
+                  <div class="form-group">
                       <label>完整地址 *</label>                                                                                                                                                                 
-                      <input type="text" id="storeAddress" required placeholder="例如：北京市朝阳区三里屯路11号">                                                                                               
-                  </div>                                                                                                                                                                                        
-                  <div class="form-group">                                                                                                                                                                      
-                      <label>类型 *</label>                                                                                                                                                                     
-                      <select id="storeType" required>                                                                                                                                                          
-                          <option value="餐厅">🍽️  餐厅</option>                                                                                                                                                 
-                          <option value="咖啡甜品店">☕ 咖啡甜品店</option>                                                                                                                                     
-                          <option value="购物">🛍️  购物</option>                                                                                                                                                 
-                      </select>                                                                                                                                                                                 
-                  </div>                                                                                                                                                                                        
-                  <div class="form-group">                                                                                                                                                                      
-                      <label>备注</label>                                                                                                                                                                       
-                      <textarea id="storeNotes" placeholder="例如：小红书推荐，招牌菜XXX"></textarea>                                                                                                           
-                  </div>                                                                                                                                                                                        
-                  <input type="hidden" id="editIndex" value="">                                                                                                                                                 
-                  <div class="form-buttons">                                                                                                                                                                    
-                      <button type="button" class="btn-cancel" onclick="closeModal()">取消</button>                                                                                                             
+                      <input type="text" id="storeAddress" required placeholder="例如：北京市朝阳区三里屯路11号">                                                                                             
+                  </div>
+                  <div class="form-group">
+                      <label>类型 *</label>
+                      <select id="storeType" required>
+                          <option value="餐厅">🍽️  餐厅</option>
+                          <option value="咖啡甜品店">☕ 咖啡甜品店</option>
+                          <option value="购物">🛍️  购物</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>备注</label>
+                      <textarea id="storeNotes" placeholder="例如：小红书推荐，招牌菜XXX"></textarea>
+                  </div>
+                  <input type="hidden" id="editIndex" value="">
+                  <div class="form-buttons">
+                      <button type="button" class="btn-cancel" onclick="closeModal()">取消</button>
                       <button type="submit" class="btn-submit">保存</button>                                                                                                                                    
-                  </div>                                                                                                                                                                                        
+                  </div>
               </form>                                                                                                                                                                                           
-          </div>                                                                                                                                                                                                
+          </div>                                                                                                                                                                                              
+      </div>
+
+      <!-- 批量导入弹窗 -->                                                                                                                                                                                     
+      <div class="modal" id="importModal">
+          <div class="modal-content">                                                                                                                                                                           
+              <div class="modal-title">批量导入店铺</div>                                                                                                                                                     
+              <div class="form-group">
+                  <label>粘贴JSON数据：</label>
+                  <textarea id="importData" class="import-textarea" placeholder='粘贴从大众点评提取的JSON数据，格式如：
+  [
+    {
+      "name": "店名",
+      "address": "地址",
+      "type": "餐厅",
+      "notes": "备注"
+    }
+  ]'></textarea>
+              </div>
+              <div class="form-buttons">
+                  <button type="button" class="btn-cancel" onclick="closeImportModal()">取消</button>
+                  <button type="button" class="btn-submit" onclick="importStores()">导入</button>
+              </div>                                                                                                                                                                                            
+          </div>
       </div>                                                                                                                                                                                                    
+                                                                                                                                                                                                              
+      <!-- 引入高德地图 -->
+      <script src="https://webapi.amap.com/maps?v=2.0&key=8a8eef3bc1ed67f061273cbd53e8062f"></script>
                                                                                                                                                                                                                 
-      <!-- 引入高德地图 -->                                                                                                                                                                                     
-      <script src="https://webapi.amap.com/maps?v=2.0&key=23616f6afae16c9be57ca6915b31266f"></script>                                                                                                           
-                                                                                                                                                                                                                
-      <script>    
-          // ============= 全局变量 =============                                                                                                                                                               
+      <script>
           let map;                                                                                                                                                                                              
-          let userLocation = null;                                                                                                                                                                              
-          let stores = [];                                                                                                                                                                                      
-          let allStores = [];                                                                                                                                                                                   
-          let markers = [];                                                                                                                                                                                     
-          let currentFilter = 'all';                                                                                                                                                                            
-                                                                                                                                                                                                                
-          // ============= 初始化 =============                                                                                                                                                                 
-          window.onload = function() {                                                                                                                                                                          
-              initMap();                                                                                                                                                                                        
+          let userLocation = null;                                                                                                                                                                            
+          let stores = [];
+          let allStores = [];
+          let markers = [];
+          let currentFilter = 'all';
+
+          window.onload = function() {
+              initMap();
               loadStores();
-          };                                                                                                                                                                                                    
-                                                                                                                                                                                                                
-          // 初始化地图                                                                                                                                                                                         
-          function initMap() {                                                                                                                                                                                  
-              map = new AMap.Map('map', {                                                                                                                                                                       
-                  zoom: 13,                                                                                                                                                                                     
-                  center: [116.397428, 39.90923],                                                                                                                                                               
+          };
+
+          function initMap() {
+              map = new AMap.Map('map', {
+                  zoom: 13,
+                  center: [116.397428, 39.90923],
                   viewMode: '3D'                                                                                                                                                                                
-              });                                                                                                                                                                                               
+              });
                                                                                                                                                                                                                 
-              getUserLocation();                                                                                                                                                                                
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          // 获取用户当前位置                                                                                                                                                                                   
-          function getUserLocation() {                                                                                                                                                                          
-              if (navigator.geolocation) {                                                                                                                                                                      
-                  navigator.geolocation.getCurrentPosition(                                                                                                                                                     
-                      function(position) {                                                                                                                                                                      
-                          userLocation = {                                                                                                                                                                      
-                              lng: position.coords.longitude,                                                                                                                                                   
-                              lat: position.coords.latitude                                                                                                                                                     
-                          };                                                                                                                                                                                    
-                                                                                                                                                                                                                
+              getUserLocation();                                                                                                                                                                              
+          }
+
+          function getUserLocation() {
+              if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(
+                      function(position) {
+                          userLocation = {
+                              lng: position.coords.longitude,
+                              lat: position.coords.latitude
+                          };
+
                           map.setCenter([userLocation.lng, userLocation.lat]);                                                                                                                                  
-                                                                                                                                                                                                                
+  
                           new AMap.Marker({                                                                                                                                                                     
-                              position: [userLocation.lng, userLocation.lat],
+                              position: [userLocation.lng, userLocation.lat],                                                                                                                                 
                               icon: '//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png',                                                                                                 
                               title: '我的位置'                                                                                                                                                                 
                           }).setMap(map);                                                                                                                                                                       
@@ -379,24 +428,23 @@
                           getCurrentLocationName(userLocation);                                                                                                                                                 
                                                                                                                                                                                                                 
                           if (stores.length > 0) {                                                                                                                                                              
-                              displayStores();
+                              displayStores();                                                                                                                                                                
                           }                                                                                                                                                                                     
-                      },
+                      },                                                                                                                                                                                        
                       function(error) {                                                                                                                                                                         
                           console.error('定位失败:', error);                                                                                                                                                    
                           document.getElementById('locationInfo').innerHTML = '📍 定位失败，请允许浏览器访问位置';                                                                                              
                       }                                                                                                                                                                                         
                   );                                                                                                                                                                                            
               }                                                                                                                                                                                                 
-          }       
-                                                                                                                                                                                                                
-          // 获取当前位置名称（使用Web服务API）                                                                                                                                                                 
-          async function getCurrentLocationName(location) {
-              const WEB_SERVICE_KEY = '8a892ff18be47efdf7633b0273491d79';                                                                                                                                       
+          }                                                                                                                                                                                                     
+  
+          async function getCurrentLocationName(location) {                                                                                                                                                     
+              const WEB_SERVICE_KEY = '8a892ff18be47efdf7633b0273491d79';                                                                                                                                     
                                                                                                                                                                                                                 
               try {                                                                                                                                                                                             
                   const response = await fetch(                                                                                                                                                                 
-                      `https://restapi.amap.com/v3/geocode/regeo?location=${location.lng},${location.lat}&key=${WEB_SERVICE_KEY}`
+                      `https://restapi.amap.com/v3/geocode/regeo?location=${location.lng},${location.lat}&key=${WEB_SERVICE_KEY}`                                                                               
                   );                                                                                                                                                                                            
                   const result = await response.json();
                                                                                                                                                                                                                 
@@ -409,10 +457,9 @@
               }                                                                                                                                                                                                 
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
-          // 加载店铺数据                                                                                                                                                                                       
-          function loadStores() {
-              const defaultStores = [                                                                                                                                                                           
-                  {                                                                                                                                                                                             
+          function loadStores() {                                                                                                                                                                               
+              const defaultStores = [                                                                                                                                                                         
+                  {
                       "name": "宴遇",
                       "address": "北京市朝阳区建国路87号北京SKP 6层",                                                                                                                                           
                       "notes": "小红书推荐，福建菜",                                                                                                                                                            
@@ -426,16 +473,16 @@
                   },                                                                                                                                                                                            
                   {                                                                                                                                                                                             
                       "name": "charcoal煤球",                                                                                                                                                                   
-                      "address": "北京市朝阳区幸福一村西里甲6号",
+                      "address": "北京市朝阳区幸福一村西里甲6号",                                                                                                                                               
                       "notes": "西餐",                                                                                                                                                                          
                       "type": "餐厅"                                                                                                                                                                            
                   }                                                                                                                                                                                             
               ];                                                                                                                                                                                                
                                                                                                                                                                                                                 
               const savedStores = localStorage.getItem('myStores');                                                                                                                                             
-              if (savedStores) {                                                                                                                                                                                
+              if (savedStores) {
                   try {                                                                                                                                                                                         
-                      allStores = JSON.parse(savedStores);                                                                                                                                                      
+                      allStores = JSON.parse(savedStores);                                                                                                                                                    
                   } catch (e) {                                                                                                                                                                                 
                       allStores = defaultStores;                                                                                                                                                                
                   }                                                                                                                                                                                             
@@ -445,38 +492,38 @@
               }                                                                                                                                                                                                 
                                                                                                                                                                                                                 
               stores = allStores;                                                                                                                                                                               
-              setupFilters();
+              setupFilters();                                                                                                                                                                                 
               geocodeStores();                                                                                                                                                                                  
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           function saveToLocalStorage() {                                                                                                                                                                       
-              localStorage.setItem('myStores', JSON.stringify(allStores));
+              localStorage.setItem('myStores', JSON.stringify(allStores));                                                                                                                                      
           }                                                                                                                                                                                                     
-                  
+                                                                                                                                                                                                              
           function openAddModal() {                                                                                                                                                                             
-              document.getElementById('modalTitle').textContent = '添加店铺';
+              document.getElementById('modalTitle').textContent = '添加店铺';                                                                                                                                 
               document.getElementById('storeForm').reset();                                                                                                                                                     
-              document.getElementById('editIndex').value = '';                                                                                                                                                  
+              document.getElementById('editIndex').value = '';                                                                                                                                                
               document.getElementById('storeModal').classList.add('show');                                                                                                                                      
-          }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
+          }                                                                                                                                                                                                   
+
           function openEditModal(index) {                                                                                                                                                                       
               const store = allStores[index];
               document.getElementById('modalTitle').textContent = '编辑店铺';                                                                                                                                   
-              document.getElementById('storeName').value = store.name;                                                                                                                                          
+              document.getElementById('storeName').value = store.name;                                                                                                                                        
               document.getElementById('storeAddress').value = store.address;                                                                                                                                    
-              document.getElementById('storeType').value = store.type;                                                                                                                                          
-              document.getElementById('storeNotes').value = store.notes || '';                                                                                                                                  
+              document.getElementById('storeType').value = store.type;                                                                                                                                        
+              document.getElementById('storeNotes').value = store.notes || '';
               document.getElementById('editIndex').value = index;                                                                                                                                               
-              document.getElementById('storeModal').classList.add('show');                                                                                                                                      
+              document.getElementById('storeModal').classList.add('show');
           }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
+                                                                                                                                                                                                              
           function closeModal() {                                                                                                                                                                               
-              document.getElementById('storeModal').classList.remove('show');                                                                                                                                   
+              document.getElementById('storeModal').classList.remove('show');                                                                                                                                 
           }                                                                                                                                                                                                     
-                  
+   
           function saveStore(event) {                                                                                                                                                                           
-              event.preventDefault();
+              event.preventDefault();                                                                                                                                                                         
                                                                                                                                                                                                                 
               const name = document.getElementById('storeName').value.trim();                                                                                                                                   
               const address = document.getElementById('storeAddress').value.trim();                                                                                                                             
@@ -487,22 +534,22 @@
               const storeData = { name, address, type, notes };                                                                                                                                                 
                                                                                                                                                                                                                 
               if (editIndex !== '') {                                                                                                                                                                           
-                  allStores[parseInt(editIndex)] = storeData;
+                  allStores[parseInt(editIndex)] = storeData;                                                                                                                                                 
               } else {                                                                                                                                                                                          
-                  allStores.push(storeData);                                                                                                                                                                    
+                  allStores.push(storeData);                                                                                                                                                                  
               }                                                                                                                                                                                                 
-                                                                                                                                                                                                                
+                                                                                                                                                                                                              
               saveToLocalStorage();                                                                                                                                                                             
-              closeModal();
+              closeModal();                                                                                                                                                                                   
                                                                                                                                                                                                                 
-              stores = allStores;                                                                                                                                                                               
+              stores = allStores;                                                                                                                                                                             
               markers.forEach(marker => marker.setMap(null));                                                                                                                                                   
               markers = [];                                                                                                                                                                                     
               geocodeStores();                                                                                                                                                                                  
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           function deleteStore(index) {                                                                                                                                                                         
-              if (confirm('确定要删除这个店铺吗？')) {
+              if (confirm('确定要删除这个店铺吗？')) {                                                                                                                                                          
                   allStores.splice(index, 1);                                                                                                                                                                   
                   saveToLocalStorage();                                                                                                                                                                         
                                                                                                                                                                                                                 
@@ -513,8 +560,70 @@
               }                                                                                                                                                                                                 
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
+          function openImportModal() {                                                                                                                                                                        
+              document.getElementById('importData').value = '';                                                                                                                                                 
+              document.getElementById('importModal').classList.add('show');                                                                                                                                     
+          }                                                                                                                                                                                                     
+                                                                                                                                                                                                                
+          function closeImportModal() {                                                                                                                                                                         
+              document.getElementById('importModal').classList.remove('show');                                                                                                                                
+          }                                                                                                                                                                                                     
+                                                                                                                                                                                                                
+          function importStores() {                                                                                                                                                                             
+              const jsonData = document.getElementById('importData').value.trim();                                                                                                                              
+                                                                                                                                                                                                                
+              if (!jsonData) {                                                                                                                                                                                  
+                  alert('请粘贴JSON数据');                                                                                                                                                                      
+                  return;                                                                                                                                                                                       
+              }                                                                                                                                                                                               
+                                                                                                                                                                                                                
+              try {                                                                                                                                                                                             
+                  const importedStores = JSON.parse(jsonData);
+                                                                                                                                                                                                                
+                  if (!Array.isArray(importedStores)) {                                                                                                                                                         
+                      alert('数据格式错误：应该是数组格式');                                                                                                                                                    
+                      return;                                                                                                                                                                                   
+                  }                                                                                                                                                                                             
+                                                                                                                                                                                                                
+                  let addedCount = 0;                                                                                                                                                                           
+                  importedStores.forEach(store => {                                                                                                                                                           
+                      if (store.name && store.address) {                                                                                                                                                        
+                          const exists = allStores.some(s =>                                                                                                                                                    
+                              s.name === store.name && s.address === store.address                                                                                                                              
+                          );                                                                                                                                                                                    
+                                                                                                                                                                                                                
+                          if (!exists) {                                                                                                                                                                        
+                              allStores.push({                                                                                                                                                                
+                                  name: store.name,                                                                                                                                                             
+                                  address: store.address,                                                                                                                                                     
+                                  type: store.type || '餐厅',                                                                                                                                                   
+                                  notes: store.notes || ''                                                                                                                                                      
+                              });                                                                                                                                                                               
+                              addedCount++;                                                                                                                                                                     
+                          }                                                                                                                                                                                     
+                      }                                                                                                                                                                                       
+                  });                                                                                                                                                                                           
+                                                                                                                                                                                                              
+                  if (addedCount > 0) {                                                                                                                                                                         
+                      saveToLocalStorage();                                                                                                                                                                   
+                      alert(`成功导入 ${addedCount} 家店铺！`);                                                                                                                                                 
+                                                                                                                                                                                                                
+                      closeImportModal();                                                                                                                                                                       
+                                                                                                                                                                                                                
+                      stores = allStores;                                                                                                                                                                       
+                      markers.forEach(marker => marker.setMap(null));                                                                                                                                         
+                      markers = [];                                                                                                                                                                             
+                      geocodeStores();                                                                                                                                                                          
+                  } else {                                                                                                                                                                                      
+                      alert('没有新店铺需要导入（可能已存在）');                                                                                                                                                
+                  }                                                                                                                                                                                             
+              } catch (error) {                                                                                                                                                                                 
+                  alert('数据格式错误：' + error.message);                                                                                                                                                      
+              }                                                                                                                                                                                                 
+          }                                                                                                                                                                                                     
+                                                                                                                                                                                                                
           function setupFilters() {                                                                                                                                                                             
-              const tabs = document.querySelectorAll('.filter-tab');
+              const tabs = document.querySelectorAll('.filter-tab');                                                                                                                                          
               tabs.forEach(tab => {                                                                                                                                                                             
                   tab.addEventListener('click', function() {                                                                                                                                                    
                       tabs.forEach(t => t.classList.remove('active'));                                                                                                                                          
@@ -523,30 +632,29 @@
                       currentFilter = this.dataset.type;                                                                                                                                                        
                       filterStores(currentFilter);                                                                                                                                                              
                   });                                                                                                                                                                                           
-              }); 
+              });                                                                                                                                                                                             
           }                                                                                                                                                                                                     
-                  
+   
           function filterStores(type) {                                                                                                                                                                         
-              if (type === 'all') {
+              if (type === 'all') {                                                                                                                                                                           
                   stores = allStores;                                                                                                                                                                           
-              } else {
+              } else {                                                                                                                                                                                          
                   stores = allStores.filter(store => store.type === type);                                                                                                                                      
               }                                                                                                                                                                                                 
-   
+                                                                                                                                                                                                              
               markers.forEach(marker => marker.setMap(null));                                                                                                                                                   
-              markers = [];
+              markers = [];                                                                                                                                                                                   
                                                                                                                                                                                                                 
               geocodeStores();                                                                                                                                                                                  
           }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
-          // 将地址转换为经纬度（使用Web服务API）                                                                                                                                                               
           async function geocodeStores() {                                                                                                                                                                      
               const WEB_SERVICE_KEY = '8a892ff18be47efdf7633b0273491d79';                                                                                                                                       
                                                                                                                                                                                                                 
               for (let i = 0; i < stores.length; i++) {                                                                                                                                                         
                   const store = stores[i];                                                                                                                                                                      
                                                                                                                                                                                                                 
-                  try {                                                                                                                                                                                         
+                  try {                                                                                                                                                                                       
                       const response = await fetch(                                                                                                                                                             
                           `https://restapi.amap.com/v3/geocode/geo?address=${encodeURIComponent(store.address)}&key=${WEB_SERVICE_KEY}`                                                                         
                       );                                                                                                                                                                                        
@@ -565,15 +673,15 @@
                           const marker = new AMap.Marker({                                                                                                                                                      
                               position: [stores[i].lng, stores[i].lat],                                                                                                                                         
                               title: store.name,                                                                                                                                                                
-                              icon: `//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-${iconColor}.png`
+                              icon: `//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-${iconColor}.png`                                                                                             
                           });                                                                                                                                                                                   
-                          marker.setMap(map);
+                          marker.setMap(map);                                                                                                                                                                   
                           markers.push(marker);                                                                                                                                                                 
                                                                                                                                                                                                                 
                           marker.on('click', function() {                                                                                                                                                       
                               const typeTag = store.type ? `<span style="padding:2px 6px;background:#${iconColor === 'red' ? 'ff4d4f' : iconColor === 'orange' ? 'fa8c16' :                                     
   '1890ff'};color:white;border-radius:3px;font-size:11px;margin-left:5px;">${store.type}</span>` : '';                                                                                                          
-                              const infoWindow = new AMap.InfoWindow({
+                              const infoWindow = new AMap.InfoWindow({                                                                                                                                        
                                   content: `<div style="padding:10px;">                                                                                                                                         
                                       <h3 style="margin:0 0 5px 0;">${store.name}${typeTag}</h3>                                                                                                                
                                       <p style="margin:0;font-size:12px;color:#666;">${store.address}</p>                                                                                                       
@@ -590,7 +698,7 @@
               }                                                                                                                                                                                                 
                                                                                                                                                                                                                 
               displayStores();                                                                                                                                                                                  
-          }       
+          }                                                                                                                                                                                                     
                                                                                                                                                                                                                 
           function calculateDistance(lat1, lng1, lat2, lng2) {                                                                                                                                                  
               const R = 6371;
@@ -602,11 +710,11 @@
               const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));                                                                                                                                           
               return R * c;                                                                                                                                                                                     
           }                                                                                                                                                                                                     
-                                                                                                                                                                                                                
-          function displayStores() {                                                                                                                                                                            
-              if (userLocation) {                                                                                                                                                                               
+                                                                                                                                                                                                              
+          function displayStores() {
+              if (userLocation) {
                   stores.forEach(store => {                                                                                                                                                                     
-                      if (store.lng && store.lat) {                                                                                                                                                             
+                      if (store.lng && store.lat) {
                           store.distance = calculateDistance(                                                                                                                                                   
                               userLocation.lat, userLocation.lng,                                                                                                                                               
                               store.lat, store.lng                                                                                                                                                              
@@ -618,12 +726,12 @@
               }                                                                                                                                                                                                 
                                                                                                                                                                                                                 
               const listHtml = stores.map((store, idx) => {                                                                                                                                                     
-                  const realIndex = allStores.findIndex(s =>
+                  const realIndex = allStores.findIndex(s =>                                                                                                                                                    
                       s.name === store.name && s.address === store.address                                                                                                                                      
                   );                                                                                                                                                                                            
                                                                                                                                                                                                                 
                   let distanceHtml = '';                                                                                                                                                                        
-                  if (store.distance !== undefined) {
+                  if (store.distance !== undefined) {                                                                                                                                                         
                       if (store.distance < 1) {                                                                                                                                                                 
                           distanceHtml = `<div class="store-distance">📍 距离您 ${(store.distance * 1000).toFixed(0)} 米</div>`;                                                                                
                       } else {                                                                                                                                                                                  
@@ -632,22 +740,22 @@
                   }                                                                                                                                                                                             
                                                                                                                                                                                                                 
                   let notesHtml = '';                                                                                                                                                                           
-                  if (store.notes) {
+                  if (store.notes) {                                                                                                                                                                          
                       notesHtml = `<div class="store-notes">💭 ${store.notes}</div>`;                                                                                                                           
                   }                                                                                                                                                                                             
                                                                                                                                                                                                                 
                   let navUrl = '';                                                                                                                                                                              
-                  if (store.lng && store.lat) {                                                                                                                                                                 
+                  if (store.lng && store.lat) {                                                                                                                                                               
                       navUrl = `https://uri.amap.com/navigation?to=${store.lng},${store.lat},${store.name}&mode=car&policy=1&src=myapp&coordinate=gaode&callnative=0`;                                          
                   }                                                                                                                                                                                             
                                                                                                                                                                                                                 
                   let typeHtml = '';                                                                                                                                                                            
-                  if (store.type) {
+                  if (store.type) {                                                                                                                                                                             
                       typeHtml = `<span class="type-tag type-${store.type}">${store.type}</span>`;                                                                                                              
                   }                                                                                                                                                                                             
                                                                                                                                                                                                                 
                   return `                                                                                                                                                                                      
-                      <div class="store-item">
+                      <div class="store-item">                                                                                                                                                                  
                           ${typeHtml}                                                                                                                                                                           
                           <div class="store-name">${store.name}</div>                                                                                                                                           
                           <div class="store-address">${store.address}</div>                                                                                                                                     
@@ -665,6 +773,8 @@
               document.getElementById('storeList').innerHTML = listHtml || '<div class="loading">暂无店铺数据</div>';                                                                                           
           }                                                                                                                                                                                                     
       </script>                                                                                                                                                                                                 
-  </body>         
-  </html>  
-  
+  </body>                                                                                                                                                                                                     
+  </html>                                                                                                                                                                                                       
+                                                                                                                                                                                                              
+                                                                                                                                                                              
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
